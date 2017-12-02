@@ -29,8 +29,7 @@ mkfs.ext4 -L arch /dev/sda3
 ### mount disks
 ```
 mount /dev/sda3 /mnt
-mkdir /mnt/boot
-mkdir /mnt/boot/EFI
+mkdir -p /mnt/boot/EFI
 mount /dev/sda1 /mnt/boot/EFI
 ```
 
@@ -325,19 +324,22 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 ### Weechat notification system
 
 ```
-mkdir ~/.weechat
-mkdir ~/.weechat/python
-mkdir ~/.weechat/python/autoload
-mkdir ~/.weechat/perl
-mkdir ~/.weechat/perl/autoload
+mkdir -p ~/.weechat/python/autoload
+mkdir -p ~/.weechat/perl/autoload
+
 cd ~/.weechat/python
+
 curl -O https://weechat.org/files/scripts/colorize_nicks.py
 cd ~/.weechat/python/autoload
 ln -sf ../colorize_nicks.py .
+
 cd ~/.weechat/perl
+
 curl -O https://weechat.org/files/scripts/buddylist.pl
 curl -O https://weechat.org/files/scripts/colorize_lines.pl
+
 cd ~/.weechat/perl/autoload
+
 ln -s ../buddylist.pl .
 ln -sf ../colorize_lines .
 ```
@@ -345,9 +347,24 @@ ln -sf ../colorize_lines .
 ### Others
 
 ```
-git clone git://gitlab.com/tmendes/cfgfiles.git $HOME/.cfg
-git clone git://gitlab.com/tmendes/scripts.git $HOME/.local/share/scrips
-git clone git://gitlab.com/tmendes/labs.git $HOME/Documents/devel/labs
+mkdir -p ~/Documents/devel/gitlab/
+mkdir -p ~/.local/share/
+
+cd ~/Documents/devel/gitlab
+
+git clone git@gitlab.com:tmendes/archlinux.git
+git clone git@gitlab.com:tmendes/invaders.love.git
+git clone git@gitlab.com:tmendes/tosdrpy.git
+git clone git@gitlab.com:tmendes/labs.git
+git clone git@gitlab.com:tmendes/38lbackpack
+git clone git@gitlab.com:tmendes/FoodScaleDroid.git
+git clone git@gitlab.com:tmendes/FoodRestrictions.git
+git clone git@gitlab.com:tmendes/DadosD.git
+git clone git@gitlab.com:tmendes/BirthDayDroid.git
+
+git clone git@gitlab.com:tmendes/scripts.git ~/.local/share/scripts
+git clone git@gitlab.com:tmendes/dotfiles.git ~/.dotfiles
+
 ```
 
 ### Bash config
@@ -363,7 +380,6 @@ git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash/.bash-git-pr
 sudo pacman -S awesome-terminal-fonts
 
 ### Gnome extensions and themes
-
 
 #### Gnome Extensions
 * https://micheleg.github.io/dash-to-dock/
