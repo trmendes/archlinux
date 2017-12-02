@@ -3,16 +3,19 @@
 ## Pre-Installation
 
 ### Connect to a wifi network
+
 ```
 wifi-menu
 ```
 
 ### Enable NTP
+
 ```
 timedatectl set-ntp true
 ```
 
 ### Configure your disk
+
 ```
 gfisk /dev/sda
 ```
@@ -27,6 +30,7 @@ mkfs.ext4 -L arch /dev/sda3
 ```
 
 ### mount disks
+
 ```
 mount /dev/sda3 /mnt
 mkdir -p /mnt/boot/EFI
@@ -51,6 +55,7 @@ arch-chroot /mnt
 ```
 
 ## Instal packs
+
 ```
 pacman -S base-devel \
          xf86-input-libinput xf86-video-intel xclip \
@@ -72,7 +77,7 @@ pacman -S base-devel \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tools \
          gnome-shell-extensions gvfs-mtp gvfs-smb networkmanager-openvpn \
-         evince eog \
+         evince eog gimp \
          xdg-user-dirs \
          gnome-devel-docs devhelp \
          gdm \
@@ -101,7 +106,10 @@ echo "LANG=en_US.UTF-8" /etc/locale.conf
 ```
 sudo nvim /etc/locale.gen
 ```
- * uncomment the line LANG=en_UTF-8
+
+ * uncomment the line
+
+> LANG=en_UTF-8
 
 ```
 locale-gen
@@ -120,9 +128,10 @@ sudo nvim /etc/hosts
 ```
 
  * Add the lines
- - 127.0.0.1    localhost.localdomain   localhost
- - ::1      localhost.localdomain   localhost
- - 127.0.1.1    archlinux.xps   archlinux
+
+> 127.0.0.1    localhost.localdomain   localhost
+> ::1          localhost.localdomain   localhost
+> 127.0.1.1    archlinux.xps   archlinux
 
 ### Pacman
 
@@ -130,9 +139,10 @@ sudo nvim /etc/hosts
 sudo nvim /etc/pacman.conf
 ```
 
- - uncomment the line Color
- - add the line ILoveCandy
- - uncomment the line VerbosePkgLists
+ * uncomment the lines
+
+> Color
+> VerbosePkgLists
 
 ### Environment
 
@@ -141,8 +151,9 @@ sudo nvim /etc/environment
 ```
 
  * Add the lines
- - GTK_IM_MODULE=cedilla
- - QT_IM_MODULE=cedilla
+
+> GTK_IM_MODULE=cedilla
+> QT_IM_MODULE=cedilla
 
 ### Sound config
 
@@ -151,7 +162,8 @@ sudo nvim /etc/modprobe.d/intel-hda.conf
 ```
 
  * Add the line
- - options snd_hda_intel index=1,0
+
+> options snd_hda_intel index=1,0
 
 ### Beep off
 
@@ -159,25 +171,29 @@ sudo nvim /etc/modprobe.d/intel-hda.conf
 sudo nvim /etc/inputrc
 ```
 
- * Add the lines
- - set bell-style none
+ * Add the line
+
+> set bell-style none
 
 ### SSH Config
 
 ```
 sudo nvim /etc/ssh/sshd_config
 ```
- - set PasswordAuthentification yes
- - PermitEmptyPassowrds no
+ * Find and set this
+
+> set PasswordAuthentification yes
+> PermitEmptyPassowrds no
 
 ### Console
 
 ```
 sudo nvim /etc/vconsole.conf
 ```
- * Add
- FONT=latarcyrheb-sun32
- KEYMAP=us-acentos
+ * Add the lines
+
+> FONT=latarcyrheb-sun32
+> KEYMAP=us-acentos
 
 ### Logs
 
@@ -185,25 +201,28 @@ sudo nvim /etc/vconsole.conf
 sudo nvim /etc/systemd/journald.conf
 ```
  * Add the line
- - SystemMaxUse=50M
 
-### Blacklist
+> SystemMaxUse=50M
+
+### Blacklist (Dell XPS)
 
 ```
 sudo nvim /etc/modprobe.d/psmouse-blacklist.conf
 ```
  * Add the line
- - blacklist psmouse
+
+> blacklist psmouse
 
 
-### Android
+### Android (Galaxy S4)
 
 ```
 sudo nvim /etc/udev/rules.d/51-android.rules
 ```
 
  * Add the line
- - SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", MODE="0666", SYMLINK+="android_adb" 
+
+> SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", MODE="0666", SYMLINK+="android_adb" 
 
 ### Grub
 
@@ -211,9 +230,11 @@ sudo nvim /etc/udev/rules.d/51-android.rules
 sudo nvim /etc/defaults/grub
 ```
 
- - GRUB_TIMEOUT=0
- - GRUB_GFXMODE=1024x768
- - GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log-priority=3" 
+* Find and edit
+
+> GRUB_TIMEOUT=0
+> GRUB_GFXMODE=1024x768
+> GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log-priority=3" 
 
 ### Buld initramfs and install Grub
 
@@ -253,21 +274,25 @@ reboot
 ```
 nvim /etc/bluetooth/audio.conf
 ```
- - Add
- * Enable=Source,Sink,Media,Socket
+ * Add the line
+
+> Enable=Source,Sink,Media,Socket
+
 
  ```
 nvim /etc/bluetooth/main.conf
  ```
 
- - Add
- * AutoEnable=true
+ * Add the line
+
+> AutoEnable=true
 
  ```
  nvim /etc/pulse/default.pa
  ```
- - Add
- * load-module module-switch-on-connect
+ * Add the line
+
+ > load-module module-switch-on-connect
 
 ### GDM, Sound and bluetooth sound
 
@@ -293,13 +318,13 @@ echo '<username> ALL=(ALL) ALL' > /etc/sudoers.d/<username>
 
 ### Root Access
 
- * [INFO] If you want to disable the root access try this next command
+> [INFO] If you want to disable the root access try this next command
 
 ```
 passwd -l root
 ```
 
- * [INFO] If you want to bring it back try this next command
+> [INFO] If you want to bring it back try this next command
 
 ```
 sudo passwd root
@@ -377,18 +402,28 @@ git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash/.bash-git-pr
 
 ### Fonts
 
+```
 sudo pacman -S awesome-terminal-fonts
+```
 
 ### Gnome extensions and themes
 
 #### Gnome Extensions
+
 * https://micheleg.github.io/dash-to-dock/
 * https://github.com/eonpatapon/gnome-shell-extension-caffeine
 * https://github.com/RaphaelRochet/arch-update
 
 #### Gnome Theme (Vimix Laptop Beryl)
+
 * https://www.gnome-look.org/p/1013698/
 
 ### Icon Theme
 
+```
 sudo pacman -S papirus-icon-theme
+```
+
+### GIMP and the XPS HIDPI Display (Dell XPS)
+
+* https://github.com/jedireza/gimp-hidpi
