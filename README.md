@@ -386,8 +386,8 @@ git clone git@gitlab.com:tmendes/FoodScaleDroid.git
 git clone git@gitlab.com:tmendes/FoodRestrictions.git
 git clone git@gitlab.com:tmendes/DadosD.git
 git clone git@gitlab.com:tmendes/BirthDayDroid.git
+git clone git@gitlab.com:tmendes/scripts.git
 
-git clone git@gitlab.com:tmendes/scripts.git ~/.local/share/scripts
 git clone git@gitlab.com:tmendes/dotfiles.git ~/.dotfiles
 
 ```
