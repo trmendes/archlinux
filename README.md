@@ -8,6 +8,9 @@
 wifi-menu
 ```
 
+> I've updated my wifi-card to make it more compatible with my Linux machinie
+> https://www.amazon.com/Intel-8260-IEEE-802-11ac-Adapter/dp/B0197W86IE/ref=sr_1_1?s=electronics&ie=UTF8&qid=1498679996&sr=1-1&keywords=intel+8260
+
 ### Enable NTP
 
 ```
