@@ -9,6 +9,7 @@ wifi-menu
 ```
 
 > I've updated my wifi-card to make it more compatible with my Linux machinie
+
 > https://www.amazon.com/Intel-8260-IEEE-802-11ac-Adapter/dp/B0197W86IE/ref=sr_1_1?s=electronics&ie=UTF8&qid=1498679996&sr=1-1&keywords=intel+8260
 
 ### Enable NTP
@@ -321,13 +322,13 @@ echo '<username> ALL=(ALL) ALL' > /etc/sudoers.d/<username>
 
 ### Root Access
 
-> [INFO] If you want to disable the root access try this next command
+* [INFO] If you want to disable the root access try this next command
 
 ```
 passwd -l root
 ```
 
-> [INFO] If you want to bring it back try this next command
+* [INFO] If you want to bring it back try this next command
 
 ```
 sudo passwd root
@@ -372,29 +373,6 @@ ln -s ../buddylist.pl .
 ln -sf ../colorize_lines .
 ```
 
-### Others
-
-```
-mkdir -p ~/Documents/devel/gitlab/
-mkdir -p ~/.local/share/
-
-cd ~/Documents/devel/gitlab
-
-git clone git@gitlab.com:tmendes/archlinux.git
-git clone git@gitlab.com:tmendes/invaders.love.git
-git clone git@gitlab.com:tmendes/tosdrpy.git
-git clone git@gitlab.com:tmendes/labs.git
-git clone git@gitlab.com:tmendes/38lbackpack
-git clone git@gitlab.com:tmendes/FoodScaleDroid.git
-git clone git@gitlab.com:tmendes/FoodRestrictions.git
-git clone git@gitlab.com:tmendes/DadosD.git
-git clone git@gitlab.com:tmendes/BirthDayDroid.git
-git clone git@gitlab.com:tmendes/scripts.git
-
-git clone git@gitlab.com:tmendes/dotfiles.git ~/.dotfiles
-
-```
-
 ### Bash config
 
 ```
@@ -430,3 +408,28 @@ sudo pacman -S papirus-icon-theme
 ### GIMP and the XPS HIDPI Display (Dell XPS)
 
 * https://github.com/jedireza/gimp-hidpi
+
+### Others (You don't have to follow the next instructions)
+
+```
+mkdir -p ~/Documents/devel/gitlab/
+mkdir -p ~/.local/share/
+
+cd ~/Documents/devel/gitlab
+
+git clone git@gitlab.com:tmendes/archlinux.git
+git clone git@gitlab.com:tmendes/invaders.love.git
+git clone git@gitlab.com:tmendes/tosdrpy.git
+git clone git@gitlab.com:tmendes/labs.git
+git clone git@gitlab.com:tmendes/38lbackpack
+git clone git@gitlab.com:tmendes/FoodScaleDroid.git
+git clone git@gitlab.com:tmendes/FoodRestrictions.git
+git clone git@gitlab.com:tmendes/DadosD.git
+git clone git@gitlab.com:tmendes/BirthDayDroid.git
+git clone git@gitlab.com:tmendes/scripts.git
+
+git clone git@gitlab.com:tmendes/dotfiles.git ~/.dotfiles
+
+```
+
+
