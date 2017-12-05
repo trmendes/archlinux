@@ -69,8 +69,8 @@ pacman -S base-devel \
          tlp tlp-rdw thermald \
          tmux htop pass pass-otp \
          ncdu exa \
-         rtorrent wget weechat firefox youtube-dl neomutt newsboat \
-         id3 moc beets mplayer \
+         rtorrent wget weechat firefox neomutt newsboat \
+         id3 moc beets mpv mps mps-youtube youtube-dl \
          aspell aspell-en \
          neovim python-neovim \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
