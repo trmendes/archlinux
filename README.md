@@ -70,7 +70,7 @@ pacman -S base-devel \
          tmux htop pass pass-otp \
          ncdu exa \
          rtorrent wget weechat firefox neomutt newsboat \
-         id3 moc beets mpv mps mps-youtube youtube-dl \
+         id3 beets mpv mps-youtube youtube-dl \
          aspell aspell-en \
          neovim python-neovim \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
