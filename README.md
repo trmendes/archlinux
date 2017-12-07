@@ -69,10 +69,11 @@ pacman -S base-devel \
          tlp tlp-rdw thermald \
          tmux htop pass pass-otp \
          ncdu exa \
-         rtorrent wget weechat firefox neomutt newsboat \
+         rtorrent wget weechat firefox neomutt \
          id3 beets mpv mps-youtube youtube-dl \
          aspell aspell-en \
          neovim python-neovim \
+         the_silver_searcher \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
          lua \
          git tig \
@@ -81,14 +82,13 @@ pacman -S base-devel \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tools \
          gnome-shell-extensions gvfs-mtp gvfs-smb networkmanager-openvpn \
-         evince eog gimp \
+         evince eog \
          xdg-user-dirs \
          gnome-devel-docs devhelp \
          gdm \
          ttf-hack \
-         grub efibootmgr intel-ucode
-
-pacman -S libreoffice
+         grub efibootmgr intel-ucode \
+         flatpak
 
 ```
 
@@ -339,6 +339,15 @@ pip install pip-autoremove
 ```
 
 ## As user
+
+### Install Apps using flatpak
+
+```
+flatpak install --from https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref
+flatpak install --from https://flathub.org/repo/appstream/org.pitivi.Pitivi.flatpakref
+flatpak install --from https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
+```
 
 ### Neovim plugin manager
 
