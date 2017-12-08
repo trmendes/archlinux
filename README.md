@@ -347,6 +347,7 @@ flatpak install --from https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakr
 flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref
 flatpak install --from https://flathub.org/repo/appstream/org.pitivi.Pitivi.flatpakref
 flatpak install --from https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
+flatpak install --from https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
 ```
 
 ### Neovim plugin manager
