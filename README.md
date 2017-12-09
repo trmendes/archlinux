@@ -69,7 +69,7 @@ pacman -S base-devel \
          tlp tlp-rdw thermald \
          tmux htop pass pass-otp \
          ncdu exa \
-         rtorrent wget weechat firefox neomutt \
+         rtorrent wget weechat firefox neomutt w3m \
          id3 beets mpv mps-youtube youtube-dl \
          aspell aspell-en \
          neovim python-neovim \
