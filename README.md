@@ -82,7 +82,7 @@ pacman -S base-devel \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tools \
          gnome-shell-extensions gvfs-mtp gvfs-smb networkmanager-openvpn \
-         eog evince devhelp gtk-doc \
+         eog evince devhelp glib2-docs \
          xdg-user-dirs \
          gdm \
          ttf-hack \
