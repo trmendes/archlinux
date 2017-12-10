@@ -65,7 +65,7 @@ pacman -S base-devel \
          xf86-input-libinput xf86-video-intel xclip \
          openssh \
          pkgfile bash-completion \
-         syslog-ng \
+         grub efibootmgr intel-ucode \
          tlp tlp-rdw thermald \
          tmux htop pass pass-otp \
          ncdu exa \
@@ -73,23 +73,20 @@ pacman -S base-devel \
          id3 beets mpv mps-youtube youtube-dl \
          aspell aspell-en \
          neovim python-neovim \
-         the_silver_searcher \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
-         lua \
          git tig \
+         lua \
          jdk9-openjdk \
+         the_silver_searcher \
          python python-requests python-pip \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tools \
          gnome-shell-extensions gvfs-mtp gvfs-smb networkmanager-openvpn \
-         evince eog \
+         eog evince devhelp gtk-doc \
          xdg-user-dirs \
-         gnome-devel-docs devhelp \
          gdm \
          ttf-hack \
-         grub efibootmgr intel-ucode \
          flatpak
-
 ```
 
 ## Configure it
