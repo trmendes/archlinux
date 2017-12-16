@@ -86,7 +86,7 @@ pacman -S base-devel \
          xdg-user-dirs \
          gdm \
          ttf-hack \
-         flatpak
+         flatpak docker
 ```
 
 ## Configure it
