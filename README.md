@@ -390,6 +390,13 @@ curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerl
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash/.bash-git-prompt --depth=1
 ```
 
+### Yaourt
+
+```
+yaourt -S hstr-git
+yaourt -S gnome-shell-pomodoro
+```
+
 ### Fonts
 
 ```
