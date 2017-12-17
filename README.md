@@ -76,7 +76,7 @@ pacman -S base-devel \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
          git tig \
          lua \
-         jdk9-openjdk \
+         jdk7-openjdk \
          the_silver_searcher \
          python python-requests python-pip \
          gnome-control-center gnome-session gnome-setting-daemon \
@@ -86,7 +86,8 @@ pacman -S base-devel \
          xdg-user-dirs \
          gdm \
          ttf-hack \
-         flatpak docker
+         flatpak flatpak-builder \
+         docker
 ```
 
 ## Configure it
@@ -223,7 +224,7 @@ sudo nvim /etc/udev/rules.d/51-android.rules
 
  * Add the line
 
-> SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", MODE="0666", SYMLINK+="android_adb" 
+> SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", MODE="0666", SYMLINK+="android_adb"
 
 ### Grub
 
@@ -235,7 +236,7 @@ sudo nvim /etc/defaults/grub
 
 > GRUB_TIMEOUT=0
 > GRUB_GFXMODE=1024x768
-> GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log-priority=3" 
+> GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log-priority=3"
 
 ### Buld initramfs and install Grub
 
