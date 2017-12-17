@@ -87,6 +87,7 @@ pacman -S base-devel \
          gdm \
          ttf-hack \
          flatpak flatpak-builder \
+         reflatctor \
          docker
 ```
 
