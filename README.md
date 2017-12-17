@@ -76,7 +76,7 @@ pacman -S base-devel \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
          git tig \
          lua \
-         jdk7-openjdk \
+         jdk8-openjdk \
          the_silver_searcher \
          python python-requests python-pip \
          gnome-control-center gnome-session gnome-setting-daemon \
