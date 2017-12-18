@@ -385,9 +385,8 @@ ln -sf ../colorize_lines .
 ### Bash config
 
 ```
-mkdir ~/.bash
-curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash/bash-powerline.sh
-git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash/.bash-git-prompt --depth=1
+mkdir -p ~/.usr/bash
+git clone https://github.com/nojhan/liquidprompt.git ~/.usr/bash/liquidprompt
 ```
 
 ### Yaourt
@@ -448,4 +447,7 @@ git clone git@gitlab.com:tmendes/dotfiles.git ~/.dotfiles
 
 ```
 
+### Firefox
 
+To get rid of Pocket, Firefox users should head to about:config and set the
+extensions.pocket.enabled preference to false.
