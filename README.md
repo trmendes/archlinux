@@ -71,7 +71,7 @@ pacman -S base-devel \
          ncdu exa \
          rtorrent wget weechat firefox neomutt w3m \
          id3 beets mpv mps-youtube youtube-dl \
-         aspell aspell-en \
+         aspell \
          neovim python-neovim \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
          git tig \
