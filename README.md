@@ -77,7 +77,7 @@ pacman -S base-devel \
          git tig \
          lua \
          jdk8-openjdk \
-         the_silver_searcher \
+         the_silver_searcher graphviz \
          python python-requests python-pip \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tools \
