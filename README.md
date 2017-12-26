@@ -66,7 +66,7 @@ pacman -S base-devel \
          openssh \
          pkgfile bash-completion \
          grub efibootmgr intel-ucode \
-         tlp tlp-rdw thermald \
+         tlp tlp-rdw \
          tmux htop pass pass-otp \
          ncdu exa \
          rtorrent wget weechat firefox neomutt w3m \
@@ -87,8 +87,7 @@ pacman -S base-devel \
          gdm \
          ttf-hack \
          flatpak flatpak-builder \
-         reflatctor \
-         docker
+         reflatctor
 ```
 
 ## Configure it
@@ -237,7 +236,6 @@ sudo nvim /etc/defaults/grub
 
 > GRUB_TIMEOUT=0
 > GRUB_GFXMODE=1024x768
-> GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log-priority=3"
 
 ### Buld initramfs and install Grub
 
@@ -253,7 +251,6 @@ grub-install --recheck /dev/sda
 systemctl enable gdm
 systemctl enable NetworkManager
 systemctl enable ufw
-systemctl enable thermald
 systemctl enable tlp
 systemctl enable tlp-sleep
 systemctl enable bluetooth
