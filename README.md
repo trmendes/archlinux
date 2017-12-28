@@ -406,6 +406,7 @@ sudo pacman -S awesome-terminal-fonts
 * https://micheleg.github.io/dash-to-dock/
 * https://github.com/eonpatapon/gnome-shell-extension-caffeine
 * https://github.com/RaphaelRochet/arch-update
+* https://github.com/passingthru67/workspaces-to-dock
 
 #### Gnome Theme (Vimix Laptop Beryl)
 
