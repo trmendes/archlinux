@@ -433,6 +433,7 @@ cd ~/Documents/devel/gitlab
 git clone git@gitlab.com:tmendes/archlinux.git
 git clone git@gitlab.com:tmendes/invaders.love.git
 git clone git@gitlab.com:tmendes/tosdrpy.git
+git clone git@gitlab.com:tmendes/unicamp.git
 git clone git@gitlab.com:tmendes/labs.git
 git clone git@gitlab.com:tmendes/38lbackpack
 git clone git@gitlab.com:tmendes/FoodScaleDroid.git
