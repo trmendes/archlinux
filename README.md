@@ -339,11 +339,11 @@ pip install pip-autoremove
 ### Install Apps using flatpak
 
 ```
-flatpak install --from https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
 flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref
 flatpak install --from https://flathub.org/repo/appstream/org.pitivi.Pitivi.flatpakref
 flatpak install --from https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
 flatpak install --from https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
+flatpak install --from https://flathub.org/repo/appstream/org.baedert.corebird
 ```
 
 ### Neovim plugin manager
