@@ -396,7 +396,7 @@ yaourt -S gnome-shell-pomodoro
 ### Fonts
 
 ```
-sudo pacman -S awesome-terminal-fonts
+sudo pacman -S awesome-terminal-fonts noto-fonts-emoji
 ```
 
 ### Gnome extensions and themes
