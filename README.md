@@ -87,7 +87,8 @@ pacman -S base-devel \
          gdm \
          ttf-hack \
          flatpak flatpak-builder \
-         reflatctor
+         reflatctor \
+         nodejs mongodb
 ```
 
 ## Configure it
