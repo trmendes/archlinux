@@ -77,6 +77,7 @@ pacman -S base-devel \
          git tig \
          lua \
          jdk8-openjdk \
+         nodejs mongodb eslint \
          the_silver_searcher graphviz \
          python python-requests python-pip \
          gnome-control-center gnome-session gnome-setting-daemon \
@@ -87,8 +88,7 @@ pacman -S base-devel \
          gdm \
          ttf-hack \
          flatpak flatpak-builder \
-         reflatctor \
-         nodejs mongodb
+         reflatctor
 ```
 
 ## Configure it
@@ -392,6 +392,8 @@ git clone https://github.com/nojhan/liquidprompt.git ~/.usr/bash/liquidprompt
 ```
 yaourt -S hstr-git
 yaourt -S gnome-shell-pomodoro
+yaourt -S global
+
 ```
 
 ### Fonts
