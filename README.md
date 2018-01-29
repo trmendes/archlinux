@@ -411,16 +411,6 @@ sudo pacman -S awesome-terminal-fonts noto-fonts-emoji
 * https://github.com/RaphaelRochet/arch-update
 * https://github.com/passingthru67/workspaces-to-dock
 
-#### Gnome Theme (Vimix Laptop Beryl)
-
-* https://www.gnome-look.org/p/1013698/
-
-### Icon Theme
-
-```
-sudo pacman -S papirus-icon-theme
-```
-
 ### GIMP and the XPS HIDPI Display (Dell XPS)
 
 * https://github.com/jedireza/gimp-hidpi
