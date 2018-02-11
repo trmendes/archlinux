@@ -60,9 +60,32 @@ arch-chroot /mnt
 
 ## Instal packs
 
+### Add yaourt to pacman
+
+```
+sudo vim /etc/pacman.conf
+
+#add to bottom of file:
+
+[archlinuxfr]
+    SigLevel = Never
+    Server = http://repo.archlinux.fr/$arch
+
+#uncomment multilib
+#uncomment color
+```
+
+```
+pacman -S reflactor
+#Select the 200 most recently synchronized HTTP or HTTPS mirrors, sort them by download speed, and overwrite the file /etc/pacman.d/mirrorlist:
+sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+sudo pacman -Syu
+```
+
 ```
 pacman -S base-devel \
          xf86-input-libinput xf86-video-intel xclip \
+         xdg-user-dirs \
          openssh \
          pkgfile bash-completion \
          grub efibootmgr intel-ucode \
@@ -70,82 +93,29 @@ pacman -S base-devel \
          tmux htop pass pass-otp \
          ncdu exa \
          rtorrent wget weechat firefox neomutt w3m \
-         id3 beets mpv youtube-dl \
+         mpv youtube-dl \
          aspell \
          neovim python-neovim \
-         gdb valgrind ctags cscope clang clang-tools-extra strace \
+         gdb valgrind gtest ctags cscope clang clang-tools-extra strace \
          git tig \
          lua \
          jdk8-openjdk \
-         nodejs mongodb eslint \
-         the_silver_searcher graphviz \
          python python-requests python-pip \
+         nodejs mongodb eslint typescript \
+         the_silver_searcher graphviz \
+         gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tools \
          gnome-shell-extensions gvfs-mtp gvfs-smb networkmanager-openvpn \
-         eog evince devhelp glib2-docs \
-         xdg-user-dirs \
-         gdm \
-         ttf-hack \
+         eog evince \
+         papirus-icon-theme \
+         devhelp glib2-docs \
          flatpak flatpak-builder \
-         reflatctor
+         guvcview \
+         awesome-terminal-fonts noto-fonts-emoji ttf-hack
 ```
 
 ## Configure it
-
-### Localtime
-
-```
-ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
-hwclock -systohc
-```
-
-### Locale
-
-```
-echo "LANG=en_US.UTF-8" /etc/locale.conf
-```
-
-```
-sudo nvim /etc/locale.gen
-```
-
- * uncomment the line
-
-> LANG=en_UTF-8
-
-```
-locale-gen
-```
-
-### Hostname
-
-```
-echo "archlinux.xps" > /etc/hostname
-```
-
-### Hosts
-
-```
-sudo nvim /etc/hosts
-```
-
- * Add the lines
-
-> 127.0.0.1    localhost.localdomain   localhost
-> ::1          localhost.localdomain   localhost
-> 127.0.1.1    archlinux.xps   archlinux
-
-### Pacman
-
-```
-sudo nvim /etc/pacman.conf
-```
-
- * uncomment the lines
-
-> Color
-> VerbosePkgLists
 
 ### Environment
 
@@ -341,9 +311,7 @@ pip install pip-autoremove
 
 ```
 flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref
-flatpak install --from https://flathub.org/repo/appstream/org.pitivi.Pitivi.flatpakref
 flatpak install --from https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
-flatpak install --from https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
 flatpak install --from https://flathub.org/repo/appstream/org.baedert.corebird
 ```
 
@@ -385,21 +353,6 @@ ln -sf ../colorize_lines .
 ```
 mkdir -p ~/.usr/bash
 git clone https://github.com/nojhan/liquidprompt.git ~/.usr/bash/liquidprompt
-```
-
-### Yaourt
-
-```
-yaourt -S hstr-git
-yaourt -S gnome-shell-pomodoro
-yaourt -S global
-
-```
-
-### Fonts
-
-```
-sudo pacman -S awesome-terminal-fonts noto-fonts-emoji
 ```
 
 ### Gnome extensions and themes
