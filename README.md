@@ -92,8 +92,7 @@ pacman -S base-devel \
          tlp tlp-rdw \
          tmux htop pass pass-otp \
          ncdu exa \
-         rtorrent wget weechat firefox neomutt w3m \
-         mpv youtube-dl \
+         rtorrent wget weechat neomutt w3m \
          aspell \
          neovim python-neovim \
          gdb valgrind gtest ctags cscope clang clang-tools-extra strace \
@@ -108,10 +107,11 @@ pacman -S base-devel \
          gnome-shell gnome-terminal gnome-tweak-tools \
          gnome-shell-extensions gvfs-mtp gvfs-smb networkmanager-openvpn \
          eog evince \
-         papirus-icon-theme \
-         devhelp glib2-docs \
-         flatpak flatpak-builder \
+         firefox chromium \
+         flatpak \
          guvcview \
+         mpv youtube-dl \
+         papirus-icon-theme \
          awesome-terminal-fonts noto-fonts-emoji ttf-hack
 ```
 
@@ -282,7 +282,7 @@ sudo ufw default deny incoming
 ### Adding an user
 
 ```
-useradd -m -g users -G wheel -s /bin/sh <username>
+useradd -m -g users -G wheel,vboxusers -s /bin/sh <username>
 passwd <username>
 echo '<username> ALL=(ALL) ALL' > /etc/sudoers.d/<username>
 ```
