@@ -111,7 +111,7 @@ pacman -S base-devel \
          flatpak \
          guvcview \
          mpv youtube-dl \
-         papirus-icon-theme \
+         papirus-icon-theme arc-gtk-theme \
          awesome-terminal-fonts noto-fonts-emoji ttf-hack
 ```
 
@@ -311,8 +311,6 @@ pip install pip-autoremove
 
 ```
 flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref
-flatpak install --from https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
-flatpak install --from https://flathub.org/repo/appstream/org.baedert.corebird
 ```
 
 ### Neovim plugin manager
