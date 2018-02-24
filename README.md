@@ -89,6 +89,7 @@ pacman -S base-devel \
          openssh \
          pkgfile bash-completion \
          grub efibootmgr intel-ucode \
+         lm_sensors acpi \
          tlp tlp-rdw \
          tmux htop pass pass-otp \
          ncdu exa \
