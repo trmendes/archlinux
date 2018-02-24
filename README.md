@@ -102,6 +102,7 @@ pacman -S base-devel \
          python python-requests python-pip \
          nodejs mongodb eslint typescript \
          the_silver_searcher graphviz \
+         docker \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tools \
