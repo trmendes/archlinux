@@ -87,22 +87,21 @@ pacman -S base-devel \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          openssh \
-         pkgfile bash-completion \
+         bash-completion \
          grub efibootmgr intel-ucode \
          lm_sensors acpi \
          tlp tlp-rdw \
-         tmux htop pass pass-otp \
-         ncdu exa \
-         rtorrent wget weechat neomutt w3m \
+         tmux htop pass pass-otp ncdu exa \
+         rtorrent wget weechat neomutt w3m graphviz \
          aspell \
          neovim python-neovim \
-         gdb valgrind gtest ctags cscope clang clang-tools-extra strace \
+         gdb valgrind ctags cscope clang clang-tools-extra strace \
          git tig \
          lua \
          jdk8-openjdk \
          python python-requests python-pip \
-         nodejs mongodb eslint typescript \
-         the_silver_searcher graphviz \
+         nodejs mongodb eslint \
+         the_silver_searcher \
          docker \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
