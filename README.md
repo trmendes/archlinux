@@ -102,7 +102,7 @@ pacman -S base-devel \
          python python-requests python-pip \
          nodejs mongodb eslint \
          the_silver_searcher \
-         docker \
+         docker docker-compose \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tools \
