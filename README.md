@@ -41,6 +41,20 @@ mkdir -p /mnt/boot/EFI
 mount /dev/sda1 /mnt/boot/EFI
 ```
 
+### Timezone
+
+```
+ln -sf /usr/share/zoneinfo/Brazil /etc/localtime
+hwclock --systohc
+```
+
+### Locale
+
+```
+/etc/locale.conf
+LANG=en_US.UTF-8
+```
+
 ## Installation
 
 ### Packs to install
@@ -118,10 +132,21 @@ pacman -S base-devel \
 
 ## Configure it
 
-### Environment
 
+### Network
+```
+sudo echo "rabbit_of_caerbannog" > /etc/hostname
+```
+
+### Environment
 ```
 sudo nvim /etc/environment
+sudo nvim /etc/hosts
+
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	rabbit_of_caerbannog.local rabbit_of_caerbannog
+
 ```
 
  * Add the lines
