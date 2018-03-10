@@ -106,7 +106,7 @@ pacman -S base-devel \
          lm_sensors acpi \
          tlp tlp-rdw \
          tmux htop pass pass-otp ncdu exa \
-         rtorrent wget weechat neomutt w3m graphviz \
+         rtorrent wget weechat neomutt esmtp w3m graphviz \
          aspell \
          neovim python-neovim \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
