@@ -95,7 +95,7 @@ arch-chroot /mnt
 [archlinuxfr]
     SigLevel = Never
     Server = http://repo.archlinux.fr/$arch
-    
+
 ---------------------
 
 #uncomment multilib
@@ -105,8 +105,8 @@ arch-chroot /mnt
 ```
 pacman -S reflactor
 #Select the 200 most recently synchronized HTTP or HTTPS mirrors, sort them by download speed, and overwrite the file /etc/pacman.d/mirrorlist:
-sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-sudo pacman -Syu
+reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+pacman -Syu
 ```
 
 ```
@@ -122,6 +122,7 @@ pacman -S base-devel \
          sudo \
          tmux htop pass pass-otp exa \
          rtorrent wget weechat neomutt w3m \
+	 calcurse \
          aspell \
          neovim python-neovim \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
@@ -131,7 +132,8 @@ pacman -S base-devel \
          jdk8-openjdk \
          android-udev \
          python python-requests python-pip \
-         nodejs mongodb eslint \
+         nodejs mongodb eslint yarn \
+	 rubygems \
          the_silver_searcher \
          docker docker-compose \
          gdm \
@@ -144,8 +146,9 @@ pacman -S base-devel \
          flatpak \
          guvcview \
          mpv youtube-dl \
+         homebank \
          papirus-icon-theme arc-gtk-theme \
-         awesome-terminal-fonts noto-fonts-emoji ttf-hack
+         awesome-terminal-fonts noto-fonts-emoji ttf-hack ttf-symbola
 ```
 
 ## Configure it
@@ -158,7 +161,7 @@ echo "rabbit_of_caerbannog" > /etc/hostname
 ```
 
 ```
-sudo nvim /etc/hosts
+/etc/hosts
 
 ---------------------
 
@@ -171,7 +174,7 @@ sudo nvim /etc/hosts
 ### Environment
 
 ```
-sudo nvim /etc/environment
+/etc/environment
 
 ---------------------
 
@@ -237,7 +240,7 @@ blacklist psmouse
 ### Grub
 
 ```
-sudo nvim /etc/defaults/grub
+/etc/defaults/grub
 
 ---------------------
 
@@ -300,13 +303,13 @@ AutoEnable=true
 
 ```
 /etc/pulse/default.pa
- 
+
 ---------------------
- 
-load-module module-switch-on-connect 
- 
+
+load-module module-switch-on-connect
+
 ```
- 
+
 ### GDM, Sound and bluetooth sound
 
 ```
@@ -317,9 +320,9 @@ ln -s /dev/null ~gdm/.config/systemd/user/pulseaudio.socket
 ### ufw config
 
 ```
-sudo ufw enable
-sudo ufw default allow outgoing
-sudo ufw default deny incoming
+ufw enable
+ufw default allow outgoing
+ufw default deny incoming
 ```
 
 ### Adding an user
@@ -341,7 +344,7 @@ passwd -l root
 * [INFO] If you want to bring it back try this next command
 
 ```
-sudo passwd root
+passwd root
 ```
 
 ### Python modules
@@ -361,7 +364,8 @@ flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreO
 ### Neovim plugin manager
 
 ```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ### Gnome config
