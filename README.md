@@ -111,8 +111,10 @@ pacman -S base-devel \
          neovim python-neovim \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
          git tig \
+         rust \
          lua \
          jdk8-openjdk \
+         android-udev \
          python python-requests python-pip \
          nodejs mongodb eslint \
          the_silver_searcher \
@@ -213,16 +215,6 @@ sudo nvim /etc/modprobe.d/psmouse-blacklist.conf
 > blacklist psmouse
 
 
-### Android (Galaxy S4)
-
-```
-sudo nvim /etc/udev/rules.d/51-android.rules
-```
-
- * Add the line
-
-> SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", MODE="0666", SYMLINK+="android_adb"
-
 ### Grub
 
 ```
@@ -233,6 +225,7 @@ sudo nvim /etc/defaults/grub
 
 > GRUB_TIMEOUT=0
 > GRUB_GFXMODE=1024x768
+> GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force i915.enable_rc6=7"
 
 ### Buld initramfs and install Grub
 
