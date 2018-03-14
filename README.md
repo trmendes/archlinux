@@ -52,7 +52,18 @@ hwclock --systohc
 
 ```
 /etc/locale.conf
+---------------------
 LANG=en_US.UTF-8
+```
+
+```
+/etc/locale.gen
+---------------------
+LANG=en_US.UTF-8
+```
+
+```
+locale-gen
 ```
 
 ## Installation
@@ -77,13 +88,15 @@ arch-chroot /mnt
 ### Add yaourt to pacman
 
 ```
-sudo vim /etc/pacman.conf
-
+/etc/pacman.conf
+---------------------
 #add to bottom of file:
 
 [archlinuxfr]
     SigLevel = Never
     Server = http://repo.archlinux.fr/$arch
+    
+---------------------
 
 #uncomment multilib
 #uncomment color
@@ -105,8 +118,10 @@ pacman -S base-devel \
          grub efibootmgr intel-ucode \
          lm_sensors acpi \
          tlp tlp-rdw \
-         tmux htop pass pass-otp ncdu exa \
-         rtorrent wget weechat neomutt esmtp w3m graphviz \
+         ufw \
+         sudo \
+         tmux htop pass pass-otp exa \
+         rtorrent wget weechat neomutt w3m \
          aspell \
          neovim python-neovim \
          gdb valgrind ctags cscope clang clang-tools-extra strace \
@@ -121,8 +136,9 @@ pacman -S base-devel \
          docker docker-compose \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
-         gnome-shell gnome-terminal gnome-tweak-tools \
-         gnome-shell-extensions gvfs-mtp gvfs-smb networkmanager-openvpn \
+         gnome-shell gnome-terminal gnome-tweak-tool \
+         gnome-shell-extensions gvfs-mtp networkmanager-openvpn \
+         nautilus \
          eog evince \
          firefox chromium \
          flatpak \
@@ -136,14 +152,15 @@ pacman -S base-devel \
 
 
 ### Network
+
 ```
-sudo echo "rabbit_of_caerbannog" > /etc/hostname
+echo "rabbit_of_caerbannog" > /etc/hostname
 ```
 
-### Environment
 ```
-sudo nvim /etc/environment
 sudo nvim /etc/hosts
+
+---------------------
 
 127.0.0.1	localhost
 ::1		localhost
@@ -151,81 +168,84 @@ sudo nvim /etc/hosts
 
 ```
 
- * Add the lines
+### Environment
 
-> GTK_IM_MODULE=cedilla
-> QT_IM_MODULE=cedilla
+```
+sudo nvim /etc/environment
+
+---------------------
+
+GTK_IM_MODULE=cedilla
+QT_IM_MODULE=cedilla
+```
 
 ### Sound config
 
 ```
-sudo nvim /etc/modprobe.d/intel-hda.conf
+/etc/modprobe.d/intel-hda.conf
+
+---------------------
+
+options snd_hda_intel index=1,0
 ```
-
- * Add the line
-
-> options snd_hda_intel index=1,0
 
 ### Beep off
 
 ```
-sudo nvim /etc/inputrc
+/etc/inputrc
+
+---------------------
+
+set bell-style none
 ```
-
- * Add the line
-
-> set bell-style none
 
 ### SSH Config
 
 ```
-sudo nvim /etc/ssh/sshd_config
-```
- * Find and set this
+/etc/ssh/sshd_config
 
-> set PasswordAuthentification yes
-> PermitEmptyPassowrds no
+---------------------
+
+PermitEmptyPassowrds no
+```
+
 
 ### Console
 
 ```
-sudo nvim /etc/vconsole.conf
+/etc/vconsole.conf
+
+---------------------
+
+
+FONT=latarcyrheb-sun32
+KEYMAP=us-acentos
 ```
- * Add the lines
 
-> FONT=latarcyrheb-sun32
-> KEYMAP=us-acentos
-
-### Logs
-
-```
-sudo nvim /etc/systemd/journald.conf
-```
- * Add the line
-
-> SystemMaxUse=50M
 
 ### Blacklist (Dell XPS)
 
 ```
-sudo nvim /etc/modprobe.d/psmouse-blacklist.conf
-```
- * Add the line
+/etc/modprobe.d/psmouse-blacklist.conf
 
-> blacklist psmouse
+---------------------
+
+blacklist psmouse
+```
 
 
 ### Grub
 
 ```
 sudo nvim /etc/defaults/grub
+
+---------------------
+
+GRUB_TIMEOUT=0
+GRUB_GFXMODE=1024x768
+GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force i915.enable_rc6=7"
+
 ```
-
-* Find and edit
-
-> GRUB_TIMEOUT=0
-> GRUB_GFXMODE=1024x768
-> GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force i915.enable_rc6=7"
 
 ### Buld initramfs and install Grub
 
@@ -262,28 +282,31 @@ reboot
 ### Bluetoot
 
 ```
-nvim /etc/bluetooth/audio.conf
+/etc/bluetooth/audio.conf
+
+---------------------
+
+Enable=Source,Sink,Media,Socket
 ```
- * Add the line
 
-> Enable=Source,Sink,Media,Socket
+```
+/etc/bluetooth/main.conf
 
+---------------------
 
- ```
-nvim /etc/bluetooth/main.conf
- ```
+AutoEnable=true
 
- * Add the line
+```
 
-> AutoEnable=true
-
- ```
- nvim /etc/pulse/default.pa
- ```
- * Add the line
-
- > load-module module-switch-on-connect
-
+```
+/etc/pulse/default.pa
+ 
+---------------------
+ 
+load-module module-switch-on-connect 
+ 
+```
+ 
 ### GDM, Sound and bluetooth sound
 
 ```
@@ -292,6 +315,7 @@ ln -s /dev/null ~gdm/.config/systemd/user/pulseaudio.socket
 ```
 
 ### ufw config
+
 ```
 sudo ufw enable
 sudo ufw default allow outgoing
@@ -319,7 +343,9 @@ passwd -l root
 ```
 sudo passwd root
 ```
+
 ### Python modules
+
 ```
 pip install pip-autoremove
 ```
@@ -388,23 +414,30 @@ git clone https://github.com/nojhan/liquidprompt.git ~/.usr/bash/liquidprompt
 ### Others (You don't have to follow the next instructions)
 
 ```
-mkdir -p ~/Documents/devel/gitlab/
-mkdir -p ~/.local/share/
-
-cd ~/Documents/devel/gitlab
+# Projects
 
 git clone git@gitlab.com:tmendes/archlinux.git
+git clone git@gitlab.com:tmendes/markdown-cv.git
+git clone git@gitlab.com:tmendes/scripts.git
+git clone git@gitlab.com:tmendes/wlNomad.git
+git clone git@gitlab.com:tmendes/data_structure.git
+git clone git@gitlab.com:tmendes/FoodScaleDroid.git
+git clone git@gitlab.com:tmendes/vcfConverter.git
+git clone git@gitlab.com:tmendes/38lbackpack
+git clone https://gitlab.com/tmendes/bgstats
+git clone git@gitlab.com:tmendes/BirthDayDroid.git
+git clone git@gitlab.com:tmendes/FoodRestrictions.git
 git clone git@gitlab.com:tmendes/invaders.love.git
 git clone git@gitlab.com:tmendes/tosdrpy.git
+git clone git@gitlab.com:tmendes/DadosD.git
+
+# Labs
+
 git clone git@gitlab.com:tmendes/unicamp.git
 git clone git@gitlab.com:tmendes/labs.git
-git clone git@gitlab.com:tmendes/38lbackpack
-git clone git@gitlab.com:tmendes/FoodScaleDroid.git
-git clone git@gitlab.com:tmendes/FoodRestrictions.git
-git clone git@gitlab.com:tmendes/DadosD.git
-git clone git@gitlab.com:tmendes/BirthDayDroid.git
-git clone git@gitlab.com:tmendes/scripts.git
+git clone git@gitlab.com:tmendes/cpplabs.git
 
+# Config
 git clone git@gitlab.com:tmendes/dotfiles.git ~/.dotfiles
 
 ```
