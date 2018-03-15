@@ -44,7 +44,7 @@ mount /dev/sda1 /mnt/boot/EFI
 ### Timezone
 
 ```
-ln -sf /usr/share/zoneinfo/Brazil /etc/localtime
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
 ```
 
@@ -133,9 +133,10 @@ pacman -S base-devel \
          android-udev \
          python python-requests python-pip \
          nodejs mongodb eslint yarn \
-	 rubygems \
+         rubygems \
          the_silver_searcher \
          docker docker-compose \
+         gtk2-2 \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tool \
