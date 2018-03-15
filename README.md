@@ -106,6 +106,9 @@ arch-chroot /mnt
 pacman -S reflactor
 #Select the 200 most recently synchronized HTTP or HTTPS mirrors, sort them by download speed, and overwrite the file /etc/pacman.d/mirrorlist:
 reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+```
+
+```
 pacman -Syu
 ```
 
@@ -149,7 +152,8 @@ pacman -S base-devel \
          mpv youtube-dl \
          homebank anki \
          papirus-icon-theme arc-gtk-theme \
-         awesome-terminal-fonts noto-fonts-emoji ttf-hack ttf-symbola
+         awesome-terminal-fonts noto-fonts-emoji ttf-hack ttf-symbola \
+         libreoffice
 ```
 
 ## Configure it
