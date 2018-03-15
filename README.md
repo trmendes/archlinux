@@ -125,7 +125,7 @@ pacman -S base-devel \
 	 calcurse \
          aspell \
          neovim python-neovim \
-         gdb valgrind ctags cscope clang clang-tools-extra strace \
+         gdb valgrind ctags cscope clang clang-tools-extra strace bc \
          git tig \
          rust \
          lua \
