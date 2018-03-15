@@ -136,7 +136,7 @@ pacman -S base-devel \
          rubygems \
          the_silver_searcher \
          docker docker-compose \
-         gtk2-2 \
+         gtk2-2 expac \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tool \
