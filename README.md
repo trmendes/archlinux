@@ -153,6 +153,7 @@ pacman -S base-devel \
          homebank anki \
          papirus-icon-theme arc-gtk-theme \
          awesome-terminal-fonts noto-fonts-emoji ttf-hack ttf-symbola \
+         powerline-fonts\
          libreoffice
 ```
 
