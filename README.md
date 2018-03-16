@@ -125,7 +125,7 @@ pacman -S base-devel \
          sudo \
          tmux htop pass pass-otp exa \
          rtorrent wget weechat neomutt w3m \
-	 calcurse \
+	    calcurse abook \
          aspell \
          neovim python-neovim \
          gdb valgrind ctags cscope clang clang-tools-extra strace bc \
