@@ -114,6 +114,7 @@ pacman -Syu
 
 ```
 pacman -S base-devel \
+         wpa_supplicant dialog wavemon \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          openssh \
@@ -144,7 +145,7 @@ pacman -S base-devel \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak-tool \
-         gnome-shell-extensions gvfs-mtp networkmanager-openvpn \
+         gnome-shell-extensions gvfs-mtp \
          nautilus \
          eog evince \
          firefox chromium \
@@ -269,7 +270,6 @@ grub-install --recheck /dev/sda
 
 ```
 systemctl enable gdm
-systemctl enable NetworkManager
 systemctl enable ufw
 systemctl enable tlp
 systemctl enable tlp-sleep
