@@ -130,6 +130,7 @@ pacman -S base-devel \
          neovim python-neovim \
          gdb valgrind ctags cscope clang clang-tools-extra strace bc \
          git tig \
+         meson ninja \
          rust \
          lua \
          jdk8-openjdk \
