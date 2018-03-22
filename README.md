@@ -129,7 +129,7 @@ pacman -S base-devel \
 	    calcurse abook python-httplib2 \
          aspell \
          neovim python-neovim \
-         gdb valgrind ctags cscope clang clang-tools-extra strace bc \
+         gdb valgrind ctags cscope clang strace bc \
          git tig \
          meson ninja \
          rust \
