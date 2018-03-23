@@ -41,6 +41,90 @@ mkdir -p /mnt/boot/EFI
 mount /dev/sda1 /mnt/boot/EFI
 ```
 
+## Installation
+
+# Fix pacman.conf
+```
+/etc/pacman.conf
+---------------------
+#add to bottom of file:
+
+[archlinuxfr]
+    SigLevel = Never
+    Server = http://repo.archlinux.fr/$arch
+
+#Move the best mirror to the top (the one at your country?)
+
+---------------------
+
+#uncomment multilib
+#uncomment color
+```
+
+### Packs to install
+
+```
+pacstrap /mnt base
+```
+
+### Create the fstab file and start arch to configure it
+
+```
+genfstab -p /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+```
+
+## Instal packs
+
+```
+pacman -S base-devel \
+         wpa_supplicant dialog wavemon netclt \
+         xf86-input-libinput xf86-video-intel xclip \
+         xdg-user-dirs \
+         openssh \
+         bash-completion \
+         grub efibootmgr intel-ucode \
+         lm_sensors acpi \
+         tlp tlp-rdw \
+         ufw \
+         sudo \
+         tmux htop pass pass-otp exa \
+         rtorrent wget weechat neomutt w3m \
+	     calcurse abook python-httplib2 \
+         aspell \
+         neovim python-neovim \
+         gdb valgrind ctags cscope clang strace bc \
+         git tig \
+         meson ninja \
+         rust \
+         lua \
+         jdk8-openjdk \
+         android-udev \
+         python python-requests python-pip \
+         nodejs mongodb yarn \
+         rubygems \
+         the_silver_searcher \
+         docker docker-compose \
+         gtk2-2 expac \
+         gdm \
+         gnome-control-center gnome-session gnome-setting-daemon \
+         gnome-shell gnome-terminal gnome-tweak-tool \
+         gnome-shell-extensions gvfs-mtp \
+         nautilus \
+         eog evince \
+         firefox chromium \
+         flatpak \
+         guvcview \
+         mpv youtube-dl \
+         homebank anki \
+         papirus-icon-theme arc-gtk-theme \
+         awesome-terminal-fonts noto-fonts-emoji ttf-hack ttf-symbola \
+         powerline-fonts\
+         libreoffice
+```
+
+## Configure it
+
 ### Timezone
 
 ```
@@ -65,102 +149,6 @@ LANG=en_US.UTF-8
 ```
 locale-gen
 ```
-
-## Installation
-
-### Packs to install
-
-```
-pacstrap /mnt base
-```
-
-## Mount it after install
-
-### Create the fstab file and start arch to configure it
-
-```
-genfstab -p /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
-```
-
-## Instal packs
-
-### Add yaourt to pacman
-
-```
-/etc/pacman.conf
----------------------
-#add to bottom of file:
-
-[archlinuxfr]
-    SigLevel = Never
-    Server = http://repo.archlinux.fr/$arch
-
----------------------
-
-#uncomment multilib
-#uncomment color
-```
-
-```
-pacman -S reflactor
-#Select the 200 most recently synchronized HTTP or HTTPS mirrors, sort them by download speed, and overwrite the file /etc/pacman.d/mirrorlist:
-reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-```
-
-```
-pacman -Syu
-```
-
-```
-pacman -S base-devel \
-         wpa_supplicant dialog wavemon \
-         xf86-input-libinput xf86-video-intel xclip \
-         xdg-user-dirs \
-         openssh \
-         bash-completion \
-         grub efibootmgr intel-ucode \
-         lm_sensors acpi \
-         tlp tlp-rdw \
-         ufw \
-         sudo \
-         tmux htop pass pass-otp exa \
-         rtorrent wget weechat neomutt w3m \
-	    calcurse abook python-httplib2 \
-         aspell \
-         neovim python-neovim \
-         gdb valgrind ctags cscope clang strace bc \
-         git tig \
-         meson ninja \
-         rust \
-         lua \
-         jdk8-openjdk \
-         android-udev \
-         python python-requests python-pip \
-         nodejs mongodb eslint yarn \
-         rubygems \
-         the_silver_searcher \
-         docker docker-compose \
-         gtk2-2 expac \
-         gdm \
-         gnome-control-center gnome-session gnome-setting-daemon \
-         gnome-shell gnome-terminal gnome-tweak-tool \
-         gnome-shell-extensions gvfs-mtp \
-         nautilus \
-         eog evince \
-         firefox chromium \
-         flatpak \
-         guvcview \
-         mpv youtube-dl \
-         homebank anki \
-         papirus-icon-theme arc-gtk-theme \
-         awesome-terminal-fonts noto-fonts-emoji ttf-hack ttf-symbola \
-         powerline-fonts\
-         libreoffice
-```
-
-## Configure it
-
 
 ### Network
 
@@ -210,16 +198,6 @@ options snd_hda_intel index=1,0
 set bell-style none
 ```
 
-### SSH Config
-
-```
-/etc/ssh/sshd_config
-
----------------------
-
-PermitEmptyPassowrds no
-```
-
 
 ### Console
 
@@ -243,7 +221,6 @@ KEYMAP=us-acentos
 
 blacklist psmouse
 ```
-
 
 ### Grub
 
@@ -270,6 +247,7 @@ grub-install --recheck /dev/sda
 
 ```
 systemctl enable gdm
+systemctl enable netctl-auto
 systemctl enable ufw
 systemctl enable tlp
 systemctl enable tlp-sleep
