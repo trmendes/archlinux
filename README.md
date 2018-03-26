@@ -78,7 +78,7 @@ arch-chroot /mnt
 
 ```
 pacman -S base-devel \
-         wpa_supplicant dialog wavemon netclt \
+         wpa_supplicant dialog wavemon netclt networkmanager \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          openssh \
@@ -108,7 +108,7 @@ pacman -S base-devel \
          gtk2-2 expac \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
-         gnome-shell gnome-terminal gnome-tweak-tool \
+         gnome-shell gnome-terminal gnome-tweak \
          gnome-shell-extensions gvfs-mtp \
          nautilus \
          eog evince \
@@ -247,11 +247,11 @@ grub-install --recheck /dev/sda
 
 ```
 systemctl enable gdm
-systemctl enable netctl-auto
 systemctl enable ufw
 systemctl enable tlp
 systemctl enable tlp-sleep
 systemctl enable bluetooth
+systemctl enable networkmanager
 systemctl disable man-db.service
 systemctl mask systemd-rfkill
 systemctl mask systemd-rfkill.socket
