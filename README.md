@@ -109,7 +109,7 @@ pacman -S base-devel \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-terminal gnome-tweak \
-         gnome-shell-extensions gvfs-mtp \
+         gnome-shell-extensions gvfs-mtp gvfs-smb \
          nautilus \
          eog evince \
          firefox chromium \
