@@ -78,7 +78,7 @@ arch-chroot /mnt
 
 ```
 pacman -S base-devel \
-         wpa_supplicant dialog wavemon networkmanager \
+         wpa_supplicant dialog networkmanager networkmanager-openvpn \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          openssh \
@@ -252,6 +252,8 @@ systemctl enable tlp
 systemctl enable tlp-sleep
 systemctl enable bluetooth
 systemctl enable networkmanager
+systemctl enable wpa_supplicant.service
+systemctl disable dhcpcd@.service
 systemctl disable man-db.service
 systemctl mask systemd-rfkill
 systemctl mask systemd-rfkill.socket
@@ -313,9 +315,10 @@ ufw default deny incoming
 ### Adding an user
 
 ```
-useradd -m -g users -G wheel,vboxusers -s /bin/sh <username>
+useradd -m -g users -s /bin/sh <username>
 passwd <username>
 echo '<username> ALL=(ALL) ALL' > /etc/sudoers.d/<username>
+gpasswd -a username network,wheel,vboxusers
 ```
 
 ### Root Access
