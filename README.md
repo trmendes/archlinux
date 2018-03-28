@@ -78,7 +78,7 @@ arch-chroot /mnt
 
 ```
 pacman -S base-devel \
-         wpa_supplicant dialog wavemon netclt networkmanager \
+         wpa_supplicant dialog wavemon networkmanager \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          openssh \
