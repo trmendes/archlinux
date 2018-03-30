@@ -43,10 +43,13 @@ mount /dev/sda1 /mnt/boot/EFI
 
 ## Installation
 
-# Fix pacman.conf
+### Fix pacman.conf
+
 ```
 /etc/pacman.conf
+
 ---------------------
+
 #add to bottom of file:
 
 [archlinuxfr]
@@ -108,7 +111,7 @@ pacman -S base-devel \
          gtk2-2 expac \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
-         gnome-shell gnome-terminal gnome-tweak \
+         gnome-shell gnome-terminal gnome-tweak gnome-keyring \
          gnome-shell-extensions gvfs-mtp gvfs-smb \
          nautilus \
          eog evince \
@@ -136,13 +139,17 @@ hwclock --systohc
 
 ```
 /etc/locale.conf
+
 ---------------------
+
 LANG=en_US.UTF-8
 ```
 
 ```
 /etc/locale.gen
+
 ---------------------
+
 LANG=en_US.UTF-8
 ```
 
@@ -162,7 +169,7 @@ echo "rabbit_of_caerbannog" > /etc/hostname
 ---------------------
 
 127.0.0.1	localhost
-::1		localhost
+::1         localhost
 127.0.1.1	rabbit_of_caerbannog.local rabbit_of_caerbannog
 
 ```
@@ -206,7 +213,6 @@ set bell-style none
 
 ---------------------
 
-
 FONT=latarcyrheb-sun32
 KEYMAP=us-acentos
 ```
@@ -231,7 +237,7 @@ blacklist psmouse
 
 GRUB_TIMEOUT=0
 GRUB_GFXMODE=1024x768
-GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force i915.enable_rc6=7"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 
 ```
 
@@ -269,33 +275,7 @@ reboot
 
 ## As root
 
-### Bluetoot
-
-```
-/etc/bluetooth/audio.conf
-
----------------------
-
-Enable=Source,Sink,Media,Socket
-```
-
-```
-/etc/bluetooth/main.conf
-
----------------------
-
-AutoEnable=true
-
-```
-
-```
-/etc/pulse/default.pa
-
----------------------
-
-load-module module-switch-on-connect
-
-```
+### Bluetooth
 
 ### GDM, Sound and bluetooth sound
 
@@ -343,12 +323,6 @@ pip install pip-autoremove
 
 ## As user
 
-### Install Apps using flatpak
-
-```
-flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref
-```
-
 ### Neovim plugin manager
 
 ```
@@ -360,44 +334,14 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
  * Keyboard: English (US, intl, with dead keys)
 
-### Weechat notification system
-
-```
-mkdir -p ~/.weechat/python/autoload
-mkdir -p ~/.weechat/perl/autoload
-
-cd ~/.weechat/python
-
-curl -O https://weechat.org/files/scripts/colorize_nicks.py
-cd ~/.weechat/python/autoload
-ln -sf ../colorize_nicks.py .
-
-cd ~/.weechat/perl
-
-curl -O https://weechat.org/files/scripts/buddylist.pl
-curl -O https://weechat.org/files/scripts/colorize_lines.pl
-
-cd ~/.weechat/perl/autoload
-
-ln -s ../buddylist.pl .
-ln -sf ../colorize_lines .
-```
-
 ### Bash config
 
 ```
-mkdir -p ~/.usr/bash
-git clone https://github.com/nojhan/liquidprompt.git ~/.usr/bash/liquidprompt
+mkdir -p ~/.usr/share/bash
+git clone https://github.com/nojhan/liquidprompt.git ~/.usr/share/bash/liquidprompt
 ```
 
 ### Gnome extensions and themes
-
-#### Gnome Extensions
-
-* https://micheleg.github.io/dash-to-dock/
-* https://github.com/eonpatapon/gnome-shell-extension-caffeine
-* https://github.com/RaphaelRochet/arch-update
-* https://github.com/passingthru67/workspaces-to-dock
 
 ### GIMP and the XPS HIDPI Display (Dell XPS)
 
