@@ -105,7 +105,7 @@ pacman -S base-devel \
          android-udev \
          python python-requests python-pip \
          nodejs mongodb yarn \
-         rubygems \
+         hugo \
          the_silver_searcher \
          docker docker-compose \
          gtk2-2 expac \
