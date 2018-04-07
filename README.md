@@ -92,7 +92,7 @@ pacman -S base-devel \
          ufw \
          sudo \
          tmux htop pass pass-otp exa \
-         rtorrent wget weechat neomutt w3m \
+         rtorrent wget neomutt w3m \
 	     calcurse abook python-httplib2 \
          aspell \
          neovim python-neovim \
