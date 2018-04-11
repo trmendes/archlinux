@@ -62,6 +62,7 @@ mount /dev/sda1 /mnt/boot/EFI
 
 #uncomment multilib
 #uncomment color
+#add ILoveCandy
 ```
 
 ### Packs to install
@@ -91,7 +92,7 @@ pacman -S base-devel \
          tlp tlp-rdw \
          ufw \
          sudo \
-         tmux htop pass pass-otp exa \
+         tmux htop pass pass-otp exa ncdu \
          rtorrent wget neomutt w3m \
 	     calcurse abook python-httplib2 \
          aspell \
@@ -109,9 +110,10 @@ pacman -S base-devel \
          the_silver_searcher \
          docker docker-compose \
          gtk2-2 expac \
+         termite \
          gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
-         gnome-shell gnome-terminal gnome-tweak gnome-keyring \
+         gnome-shell gnome-tweak gnome-keyring \
          gnome-shell-extensions gvfs-mtp gvfs-smb \
          nautilus \
          eog evince \
