@@ -111,7 +111,6 @@ pacman -S base-devel \
          docker docker-compose \
          gtk2-2 expac \
          termite \
-         gdm \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-tweak gnome-keyring \
          gnome-shell-extensions gvfs-mtp gvfs-smb \
@@ -229,6 +228,15 @@ KEYMAP=us-acentos
 
 blacklist psmouse
 ```
+### Journalfs
+
+```
+/etc/systemd/journald.conf
+
+---------------------
+
+SystemMaxUse=50M
+```
 
 ### Grub
 
@@ -239,7 +247,7 @@ blacklist psmouse
 
 GRUB_TIMEOUT=0
 GRUB_GFXMODE=1024x768
-GRUB_CMDLINE_LINUX_DEFAULT="quiet"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force"
 
 ```
 
