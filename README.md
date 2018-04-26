@@ -82,16 +82,16 @@ arch-chroot /mnt
 
 ```
 pacman -S base-devel \
-         wpa_supplicant dialog networkmanager networkmanager-openvpn \
+         networkmanager networkmanager-openvpn \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          openssh \
          bash-completion \
          grub efibootmgr intel-ucode \
-         lm_sensors acpi \
-         tlp tlp-rdw \
+         lm_sensors acpi tlp tlp-rdw \
          ufw \
          sudo \
+         qemu \
          tmux htop pass pass-otp exa ncdu \
          rtorrent wget neomutt w3m \
 	     calcurse abook python-httplib2 \
@@ -109,11 +109,11 @@ pacman -S base-devel \
          hugo \
          the_silver_searcher \
          docker docker-compose \
-         gtk2-2 expac \
          termite \
+         gtk2-2 expac \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-tweak gnome-keyring \
-         gnome-shell-extensions gvfs-mtp gvfs-smb \
+         gvfs-mtp gvfs-smb \
          nautilus \
          eog evince \
          firefox chromium \
