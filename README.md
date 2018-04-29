@@ -120,7 +120,7 @@ pacman -S base-devel \
          flatpak \
          guvcview \
          mpv youtube-dl \
-         homebank anki liferea \
+         homebank anki \
          papirus-icon-theme arc-gtk-theme \
          awesome-terminal-fonts noto-fonts-emoji ttf-hack ttf-symbola \
          powerline-fonts\
