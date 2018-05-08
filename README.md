@@ -94,7 +94,7 @@ pacman -S base-devel \
          qemu \
          tmux htop pass pass-otp exa ncdu \
          rtorrent wget neomutt w3m \
-	     calcurse abook python-httplib2 \
+	     abook python-httplib2 \
          aspell \
          neovim python-neovim \
          gdb valgrind ctags cscope clang strace bc \
@@ -107,7 +107,6 @@ pacman -S base-devel \
          python python-requests python-pip \
          nodejs mongodb yarn \
          hugo \
-         the_silver_searcher \
          docker docker-compose \
          termite \
          gtk2-2 expac \
