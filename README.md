@@ -97,6 +97,7 @@ pacman -S base-devel \
 	     abook python-httplib2 \
          aspell \
          neovim python-neovim \
+         nginx php \
          gdb valgrind ctags cscope clang strace bc \
          git tig \
          meson ninja \
