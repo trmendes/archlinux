@@ -186,6 +186,16 @@ GTK_IM_MODULE=cedilla
 QT_IM_MODULE=cedilla
 ```
 
+### Webcam config
+
+```
+/etc/modprobe.d/ucvideo.conf
+---------------------
+
+options uvcvideo nodrop=1
+options uvcvideo quirks=0x100
+```
+
 ### Sound config
 
 ```
