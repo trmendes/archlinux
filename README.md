@@ -119,7 +119,7 @@ pacman -S base-devel \
          firefox chromium \
          flatpak \
          guvcview \
-         mpv youtube-dl \
+         vlc youtube-dl \
          homebank anki \
          papirus-icon-theme arc-gtk-theme \
          awesome-terminal-fonts noto-fonts-emoji ttf-hack ttf-symbola \
