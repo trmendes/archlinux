@@ -351,6 +351,11 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
+Neovim NPM
+```
+sudo npm install -g neovim
+```
+
 ### Gnome config
 
  * Keyboard: English (US, intl, with dead keys)
