@@ -92,12 +92,12 @@ pacman -S base-devel \
          ufw \
          sudo \
          qemu \
-         tmux htop pass pass-otp exa ncdu \
+         tmux htop pass pass-otp exa \
          rtorrent wget neomutt w3m \
 	     abook python-httplib2 \
          aspell \
          neovim python-neovim \
-         moc \
+         moc ranger \
          php \
          gdb ctags cscope clang strace bc \
          git tig \
@@ -111,11 +111,9 @@ pacman -S base-devel \
          hugo \
          docker docker-compose \
          termite \
-         gtk2-2 expac \
          gnome-control-center gnome-session gnome-setting-daemon \
-         gnome-shell gnome-tweak gnome-keyring \
+         gnome-shell gnome-keyring \
          gvfs-mtp gvfs-smb \
-         nautilus \
          eog evince \
          firefox chromium \
          flatpak \
@@ -123,8 +121,7 @@ pacman -S base-devel \
          vlc youtube-dl \
          homebank anki \
          papirus-icon-theme arc-gtk-theme \
-         awesome-terminal-fonts noto-fonts-emoji ttf-hack ttf-symbola \
-         powerline-fonts\
+         noto-fonts-emoji ttf-hack \
          libreoffice
 ```
 
