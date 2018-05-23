@@ -121,7 +121,7 @@ pacman -S base-devel \
          vlc youtube-dl \
          homebank anki \
          papirus-icon-theme arc-gtk-theme \
-         noto-fonts-emoji ttf-hack \
+         noto-fonts-emoji ttf-symbola ttf-hack \
          libreoffice
 ```
 
