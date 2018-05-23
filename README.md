@@ -92,7 +92,7 @@ pacman -S base-devel \
          ufw \
          sudo \
          qemu \
-         tmux htop pass pass-otp exa \
+         tmux htop pass pass-otp exa expac \
          rtorrent wget neomutt w3m \
 	     abook python-httplib2 \
          aspell \
