@@ -98,9 +98,9 @@ pacman -S base-devel \
          aspell \
          neovim python-neovim \
          moc ranger \
-         php \
-         gdb ctags cscope clang strace bc \
          git tig \
+         php \
+         gdb ctags cscope clang \
          meson ninja \
          rust \
          lua \
@@ -115,7 +115,7 @@ pacman -S base-devel \
          gnome-shell gnome-keyring \
          gvfs-mtp gvfs-smb \
          eog evince \
-         firefox chromium \
+         firefox \
          flatpak \
          guvcview \
          vlc youtube-dl \
