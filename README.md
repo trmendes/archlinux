@@ -226,6 +226,12 @@ FONT=latarcyrheb-sun32
 KEYMAP=us-acentos
 ```
 
+### Switch off your touchScreen \o/ \o/
+```
+/etc/udev/rules.d/80-touchscreen.rules
+---------------------
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04f3", ATTRS{idProduct}=="20d0", ATTR{authorized}="0"
+```
 
 ### Blacklist (Dell XPS)
 
