@@ -88,7 +88,7 @@ pacman -S base-devel \
          openssh \
          bash-completion \
          grub efibootmgr intel-ucode \
-         lm_sensors acpi tlp tlp-rdw \
+         lm_sensors acpi tlp tlp-rdw v4l-utils \
          ufw \
          sudo \
          qemu \
@@ -117,7 +117,6 @@ pacman -S base-devel \
          eog evince \
          firefox \
          flatpak \
-         guvcview \
          vlc youtube-dl \
          anki \
          papirus-icon-theme arc-gtk-theme \
