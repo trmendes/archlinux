@@ -93,8 +93,7 @@ pacman -S base-devel \
          sudo \
          qemu \
          tmux htop pass pass-otp exa expac \
-         rtorrent wget neomutt w3m \
-	     abook python-httplib2 \
+         rtorrent wget neomutt w3m khard vdirsyncerr \
          aspell \
          neovim python-neovim \
          moc ranger \
