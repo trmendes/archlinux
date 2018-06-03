@@ -201,6 +201,14 @@ options uvcvideo quirks=0x100
 ---------------------
 
 options snd_hda_intel index=1,0
+options snd_hda_intel power_save_controller=y
+```
+
+### Wifi config
+```
+/etc/modprobe.d/iwlwifi.conf
+---------------------
+options iwlwifi power_save=1 d0i3_disable=0 uapsd_disable=0 11n_disable=8 wd_disable=1
 ```
 
 ### Beep off
