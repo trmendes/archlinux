@@ -96,7 +96,7 @@ pacman -S base-devel \
          rtorrent wget neomutt w3m khard vdirsyncerr \
          aspell \
          neovim python-neovim \
-         moc ranger \
+         cmus ranger \
          git tig \
          php \
          gdb ctags cscope clang \
@@ -106,13 +106,13 @@ pacman -S base-devel \
          jdk8-openjdk \
          android-udev \
          python python-requests python-pip \
-         nodejs mongodb yarn \
+         nodejs mongodb yarn typescript eslint \
          hugo \
          docker docker-compose \
          termite \
          gnome-control-center gnome-session gnome-setting-daemon \
          gnome-shell gnome-keyring \
-         gvfs-mtp gvfs-smb \
+         gvfs-mtp \
          eog evince \
          firefox \
          flatpak \
