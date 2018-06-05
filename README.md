@@ -94,6 +94,7 @@ pacman -S base-devel \
          qemu \
          tmux htop pass pass-otp exa expac \
          rtorrent wget neomutt w3m khard vdirsyncerr \
+         tldr \
          aspell \
          neovim python-neovim \
          cmus ranger \
