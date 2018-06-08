@@ -68,7 +68,7 @@ mount /dev/sda1 /mnt/boot/EFI
 ### Packs to install
 
 ```
-pacstrap /mnt base
+pacstrap /mnt base base-devel
 ```
 
 ### Create the fstab file and start arch to configure it
@@ -81,8 +81,7 @@ arch-chroot /mnt
 ## Instal packs
 
 ```
-pacman -S base-devel \
-         networkmanager networkmanager-openvpn \
+pacman -S networkmanager networkmanager-openvpn \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          openssh \
@@ -158,7 +157,7 @@ locale-gen
 ### Network
 
 ```
-echo "rabbit_of_caerbannog" > /etc/hostname
+echo "e-backpack" > /etc/hostname
 ```
 
 ```
@@ -322,6 +321,11 @@ ufw enable
 ufw default allow outgoing
 ufw default deny incoming
 ```
+```
+ufw allow Deluge
+ufw allow syncthing
+ufw allow syncthing-gui
+```
 
 ### Adding an user
 
@@ -375,43 +379,6 @@ sudo npm install -g neovim
 ```
 mkdir -p ~/.usr/share/bash
 git clone https://github.com/nojhan/liquidprompt.git ~/.usr/share/bash/liquidprompt
-```
-
-### Gnome extensions and themes
-
-### GIMP and the XPS HIDPI Display (Dell XPS)
-
-* https://github.com/jedireza/gimp-hidpi
-
-### Others (You don't have to follow the next instructions)
-
-```
-# Projects
-
-git clone git@gitlab.com:tmendes/archlinux.git
-git clone git@gitlab.com:tmendes/markdown-cv.git
-git clone git@gitlab.com:tmendes/scripts.git
-git clone git@gitlab.com:tmendes/wlNomad.git
-git clone git@gitlab.com:tmendes/data_structure.git
-git clone git@gitlab.com:tmendes/FoodScaleDroid.git
-git clone git@gitlab.com:tmendes/vcfConverter.git
-git clone git@gitlab.com:tmendes/38lbackpack
-git clone https://gitlab.com/tmendes/bgstats
-git clone git@gitlab.com:tmendes/BirthDayDroid.git
-git clone git@gitlab.com:tmendes/FoodRestrictions.git
-git clone git@gitlab.com:tmendes/invaders.love.git
-git clone git@gitlab.com:tmendes/tosdrpy.git
-git clone git@gitlab.com:tmendes/DadosD.git
-
-# Labs
-
-git clone git@gitlab.com:tmendes/unicamp.git
-git clone git@gitlab.com:tmendes/labs.git
-git clone git@gitlab.com:tmendes/cpplabs.git
-
-# Config
-git clone git@gitlab.com:tmendes/dotfiles.git ~/.dotfiles
-
 ```
 
 ### Firefox
