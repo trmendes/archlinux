@@ -119,7 +119,7 @@ pacman -S networkmanager networkmanager-openvpn \
          vlc youtube-dl \
          anki \
          papirus-icon-theme arc-gtk-theme \
-         noto-fonts-emoji ttf-symbola ttf-hack \
+         noto-fonts-emoji ttf-hack awesome-terminal-fonts \
          libreoffice
 ```
 
