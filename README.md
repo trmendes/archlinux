@@ -200,14 +200,15 @@ options uvcvideo quirks=0x100
 ---------------------
 
 options snd_hda_intel index=1,0
-options snd_hda_intel power_save_controller=y
 ```
 
 ### Wifi config
 ```
 /etc/modprobe.d/iwlwifi.conf
+
 ---------------------
-options iwlwifi power_save=1 d0i3_disable=0 uapsd_disable=0 11n_disable=8 wd_disable=1
+
+options iwlwifi d0i3_disable=0 uapsd_disable=0 11n_disable=8 wd_disable=1
 ```
 
 ### Beep off
@@ -235,7 +236,9 @@ KEYMAP=us-acentos
 ### Switch off your touchScreen \o/ \o/
 ```
 /etc/udev/rules.d/80-touchscreen.rules
+
 ---------------------
+
 SUBSYSTEM=="usb", ATTRS{idVendor}=="04f3", ATTRS{idProduct}=="20d0", ATTR{authorized}="0"
 ```
 
@@ -310,8 +313,8 @@ reboot
 ### GDM, Sound and bluetooth sound
 
 ```
-mkdir -p ~gdm/.config/systemd/user
-ln -s /dev/null ~gdm/.config/systemd/user/pulseaudio.socket
+#mkdir -p ~gdm/.config/systemd/user
+#ln -s /dev/null ~gdm/.config/systemd/user/pulseaudio.socket
 ```
 
 ### ufw config
@@ -377,8 +380,7 @@ sudo npm install -g neovim
 ### Bash config
 
 ```
-mkdir -p ~/.usr/share/bash
-git clone https://github.com/nojhan/liquidprompt.git ~/.usr/share/bash/liquidprompt
+cd ~ && git clone https://github.com/michaeldfallen/git-radar .git-radar
 ```
 
 ### Firefox
