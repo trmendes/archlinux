@@ -108,7 +108,7 @@ pacman -S networkmanager networkmanager-openvpn \
          neovim python-neovim \
          khard vdirsyncerr \
          rtorrent youtube-dl beet cmus flatpak ranger \
-         sway i3status redshift dunst \
+         sway i3status redshift dunst imagemagick \
          noto-fonts-emoji ttf-hack awesome-terminal-fonts \
          termite libreoffice-fresh vlc firefox
 
