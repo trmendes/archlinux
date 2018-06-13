@@ -84,19 +84,11 @@ arch-chroot /mnt
 pacman -S networkmanager networkmanager-openvpn \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
-         openssh \
-         bash-completion \
          grub efibootmgr intel-ucode \
-         lm_sensors acpi tlp tlp-rdw v4l-utils \
-         ufw \
-         sudo \
-         qemu \
-         tmux htop pass pass-otp exa expac \
-         rtorrent wget neomutt w3m khard vdirsyncerr \
-         tldr \
-         aspell \
-         neovim python-neovim \
-         cmus ranger \
+         lm_sensors acpi tlp tlp-rdw \
+         bash-completion \
+         openssh \
+         ufw sudo \
          git tig \
          php \
          gdb ctags cscope clang \
@@ -109,18 +101,17 @@ pacman -S networkmanager networkmanager-openvpn \
          nodejs mongodb yarn typescript eslint \
          hugo \
          docker docker-compose \
-         termite \
-         gnome-control-center gnome-session gnome-setting-daemon \
-         gnome-shell gnome-keyring \
-         gvfs-mtp \
-         eog evince \
-         firefox \
-         flatpak \
-         vlc youtube-dl \
-         anki \
-         papirus-icon-theme arc-gtk-theme \
+         qemu \
+         tmux htop pass pass-otp exa expac tldr \
+         neomutt w3m \
+         aspell \
+         neovim python-neovim \
+         khard vdirsyncerr \
+         rtorrent youtube-dl beet cmus flatpak ranger \
+         sway i3status redshift dunst \
          noto-fonts-emoji ttf-hack awesome-terminal-fonts \
-         libreoffice
+         termite libreoffice-fresh vlc firefox
+
 ```
 
 ## Configure it
