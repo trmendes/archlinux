@@ -148,7 +148,7 @@ locale-gen
 ### Network
 
 ```
-echo "e-backpack" > /etc/hostname
+echo "caerbannog" > /etc/hostname
 ```
 
 ```
@@ -158,7 +158,7 @@ echo "e-backpack" > /etc/hostname
 
 127.0.0.1	localhost
 ::1         localhost
-127.0.1.1	rabbit_of_caerbannog.local rabbit_of_caerbannog
+127.0.1.1	caerbannog.local caerbannog
 
 ```
 
@@ -192,16 +192,6 @@ options uvcvideo quirks=0x100
 
 options snd_hda_intel index=1,0
 ```
-
-### Wifi config
-```
-/etc/modprobe.d/iwlwifi.conf
-
----------------------
-
-options iwlwifi d0i3_disable=0 uapsd_disable=0 11n_disable=8 wd_disable=1
-```
-
 ### Beep off
 
 ```
@@ -233,6 +223,27 @@ KEYMAP=us-acentos
 SUBSYSTEM=="usb", ATTRS{idVendor}=="04f3", ATTRS{idProduct}=="20d0", ATTR{authorized}="0"
 ```
 
+### Access to change the bright of your screen
+
+```
+/etc/udev/rules.d/90-backlight.rules
+
+---------------------
+
+ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness"
+ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
+```
+
+### Suspend the system when battery drops to 5%
+
+```
+/etc/udev/rules.d/99-lowbat.rules
+
+---------------------
+
+SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-5]", RUN+="/usr/bin/systemctl hibernate"
+```
+
 ### Blacklist (Dell XPS)
 
 ```
@@ -242,6 +253,7 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="04f3", ATTRS{idProduct}=="20d0", ATTR{author
 
 blacklist psmouse
 ```
+
 ### Journalfs
 
 ```
@@ -273,41 +285,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 grub-install --recheck /dev/sda
 ```
 
-### Services
-
-```
-systemctl enable gdm
-systemctl enable ufw
-systemctl enable tlp
-systemctl enable tlp-sleep
-systemctl enable bluetooth
-systemctl enable networkmanager
-systemctl enable wpa_supplicant.service
-systemctl disable dhcpcd@.service
-systemctl disable man-db.service
-systemctl mask systemd-rfkill
-systemctl mask systemd-rfkill.socket
-systemctl mask geoclue
-```
-
-### Reboot
-
-```
-exit
-reboot
-```
-
-## As root
-
-### Bluetooth
-
-### GDM, Sound and bluetooth sound
-
-```
-#mkdir -p ~gdm/.config/systemd/user
-#ln -s /dev/null ~gdm/.config/systemd/user/pulseaudio.socket
-```
-
 ### ufw config
 
 ```
@@ -327,7 +304,24 @@ ufw allow syncthing-gui
 useradd -m -g users -s /bin/sh <username>
 passwd <username>
 echo '<username> ALL=(ALL) ALL' > /etc/sudoers.d/<username>
-gpasswd -a username network,wheel,vboxusers
+gpasswd -a username network,wheel,storage,video,libvirt,systemd-journal
+```
+
+### Services
+
+```
+systemctl enable ufw
+systemctl enable tlp
+systemctl enable tlp-sleep
+systemctl enable bluetooth
+systemctl enable networkmanager
+
+systemctl disable dhcpcd@.service
+systemctl disable man-db.service
+
+systemctl mask systemd-rfkill
+systemctl mask systemd-rfkill.socket
+systemctl mask geoclue
 ```
 
 ### Root Access
@@ -359,7 +353,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Neovim NPM
+### Neovim NPM
 ```
 sudo npm install -g neovim
 ```
