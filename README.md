@@ -85,7 +85,7 @@ pacman -S networkmanager networkmanager-openvpn \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          grub efibootmgr intel-ucode \
-         lm_sensors acpi tlp tlp-rdw \
+         lm_sensors acpi cpid tlp tlp-rdw thermald \
          bash-completion \
          openssh \
          ufw sudo \
@@ -98,20 +98,19 @@ pacman -S networkmanager networkmanager-openvpn \
          jdk8-openjdk \
          android-udev \
          python python-requests python-pip \
-         nodejs mongodb yarn typescript eslint \
+         nodejs mongodb yarn eslint \
          hugo \
-         docker docker-compose \
          qemu \
+         docker docker-compose \
          tmux htop pass pass-otp exa expac tldr \
          neomutt w3m \
          aspell \
          neovim python-neovim \
-         khard vdirsyncerr \
+         khard khal vdirsyncerr \
          rtorrent youtube-dl beet cmus flatpak ranger \
-         sway i3status redshift dunst imagemagick \
+         sway i3status dunst imagemagick \
          noto-fonts-emoji ttf-hack awesome-terminal-fonts \
          termite libreoffice-fresh vlc firefox
-
 ```
 
 ## Configure it
@@ -234,14 +233,14 @@ ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video /sys/class/backlig
 ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
 ```
 
-### Suspend the system when battery drops to 5%
+### Suspend the system when battery drops to 10%
 
 ```
 /etc/udev/rules.d/99-lowbat.rules
 
 ---------------------
 
-SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-5]", RUN+="/usr/bin/systemctl hibernate"
+SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-10]", RUN+="/usr/bin/systemctl hibernate"
 ```
 
 ### Blacklist (Dell XPS)
@@ -310,6 +309,8 @@ gpasswd -a username network,wheel,storage,video,libvirt,systemd-journal
 ### Services
 
 ```
+systemctl enable thermald
+systemclt enable acpid
 systemctl enable ufw
 systemctl enable tlp
 systemctl enable tlp-sleep
