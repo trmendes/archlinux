@@ -88,6 +88,7 @@ pacman -S networkmanager networkmanager-openvpn \
          lm_sensors acpi cpid tlp tlp-rdw thermald \
          bash-completion \
          openssh \
+         udiskie \
          ufw sudo \
          git tig \
          php \
@@ -201,7 +202,6 @@ options snd_hda_intel index=1,0
 set bell-style none
 ```
 
-
 ### Console
 
 ```
@@ -214,6 +214,7 @@ KEYMAP=us-acentos
 ```
 
 ### Switch off your touchScreen \o/ \o/
+
 ```
 /etc/udev/rules.d/80-touchscreen.rules
 
@@ -345,7 +346,7 @@ passwd root
 pip install pip-autoremove
 ```
 
-## As user
+## Do this as a user
 
 ### Neovim plugin manager
 
@@ -367,6 +368,20 @@ sudo npm install -g neovim
 
 ```
 cd ~ && git clone https://github.com/michaeldfallen/git-radar .git-radar
+```
+
+### GPG Config
+
+```
+.gnupg/gpg-agent.conf
+----------------------
+# PIN entry program
+# pinentry-program /usr/bin/pinentry-gnome3
+# pinentry-program /usr/bin/pinentry-qt
+# pinentry-program /usr/bin/pinentry-kwallet
+# pinentry-program /usr/bin/pinentry-gtk-2
+
+pinentry-program /usr/bin/pinentry-curses
 ```
 
 ### Firefox
