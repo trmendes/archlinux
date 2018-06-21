@@ -1,3 +1,5 @@
+# https://alexjj.com/blog/2016/9/setting-up-weechat/
+
 # Allow for multi-line input:
 /set weechat.bar.input.size 0
 /set weechat.bar.input.size_max 3
@@ -79,3 +81,13 @@
 # Freenode
 /server add freenode chat.freenode.net/6697 -ssl
 /set weechat.network.gnutls_ca_file "/etc/ssl/certs/ca-certificates.crt"
+
+
+
+### Wee-Slack
+curl -O https://raw.githubusercontent.com/wee-slack/wee-slack/master/wee_slack.py
+mv wee_slack.py ~/.weechat/python/autoload
+/slack register [CODE_FROM_URL]
+/slack register [CODE_FROM_URL]
+/python reload slack
+
