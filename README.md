@@ -102,7 +102,6 @@ pacman -S networkmanager networkmanager-openvpn \
          nodejs mongodb yarn eslint \
          hugo \
          qemu \
-         docker docker-compose \
          tmux htop pass pass-otp exa expac tldr \
          neomutt w3m \
          aspell \
