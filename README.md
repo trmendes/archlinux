@@ -111,7 +111,7 @@ pacman -S networkmanager networkmanager-openvpn \
          rtorrent youtube-dl beet cmus flatpak ranger imlib2 \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer bluez \
          sway i3status dunst imagemagick \
-         noto-fonts-emoji ttf-hack awesome-terminal-fonts \
+         noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
          termite libreoffice-fresh vlc firefox
 ```
 
