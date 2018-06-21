@@ -87,7 +87,8 @@
 ### Wee-Slack
 curl -O https://raw.githubusercontent.com/wee-slack/wee-slack/master/wee_slack.py
 mv wee_slack.py ~/.weechat/python/autoload
-/slack register [CODE_FROM_URL]
-/slack register [CODE_FROM_URL]
+/secure passphrase type_a_secure_password
+/secure set slack_token [YOUR_SLACK_TOKEN1],[YOUR_SLACK_TOKEN_N]
+/set plugins.var.python.slack.slack_api_token ${sec.data.slack_token}
 /python reload slack
 
