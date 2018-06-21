@@ -5,14 +5,14 @@
 /set irc.look.smart_filter on
 /filter add irc_smart * irc_smart_filter *
 # Making it look a bit nicer:
-/set weechat.look.prefix_same_nick "\u2937"
-/set weechat.look.prefix_error "\u26a0"
-/set weechat.look.prefix_action "\u26a1"
-/set weechat.look.bar_more_down "\u25bc\u25bc"
-/set weechat.look.bar_more_left "\u25c0\u25c0"
-/set weechat.look.bar_more_right "\u25b6\u25b6"
-/set weechat.look.bar_more_up "\u25b2\u25b2"
-/set weechat.look.prefix_suffix "\u2561"
+#/set weechat.look.prefix_same_nick "\u2937"
+#/set weechat.look.prefix_error "\u26a0"
+#/set weechat.look.prefix_action "\u26a1"
+#/set weechat.look.bar_more_down "\u25bc\u25bc"
+#/set weechat.look.bar_more_left "\u25c0\u25c0"
+#/set weechat.look.bar_more_right "\u25b6\u25b6"
+#/set weechat.look.bar_more_up "\u25b2\u25b2"
+#/set weechat.look.prefix_suffix "\u2561"
 /set weechat.color.chat_nick_colors red,green,brown,blue,magenta,cyan,white,lightred,lightgreen,yellow,lightblue,lightmagenta,lightcyan
 /set weechat.color.separator 31
 /set buffers.color.current_fg 31
