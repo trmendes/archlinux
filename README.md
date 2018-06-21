@@ -85,7 +85,7 @@ pacman -S networkmanager networkmanager-openvpn \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          grub efibootmgr intel-ucode \
-         lm_sensors acpi cpid tlp tlp-rdw thermald \
+         lm_sensors acpi acpid tlp tlp-rdw thermald \
          bash-completion \
          openssh \
          udiskie \
@@ -107,8 +107,9 @@ pacman -S networkmanager networkmanager-openvpn \
          neomutt w3m \
          aspell \
          neovim python-neovim \
-         khard khal vdirsyncerr \
-         rtorrent youtube-dl beet cmus flatpak ranger imlib2 \
+         khard khal vdirsyncer \
+         rtorrent youtube-dl beets flatpak ranger imlib2 \
+         mpd ncmpcpp mpc \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer bluez \
          sway i3status dunst imagemagick \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
