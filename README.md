@@ -109,10 +109,12 @@ pacman -S networkmanager networkmanager-openvpn \
          khard khal vdirsyncer \
          rtorrent youtube-dl beets flatpak ranger imlib2 \
          mpd ncmpcpp mpc \
-         pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer bluez \
+         pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
+         bluez \
          sway i3status dunst imagemagick \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
-         termite libreoffice-fresh vlc firefox
+         blueman \
+         termite libreoffice-fresh vlc firefox eog evince
 ```
 
 ## Configure it
