@@ -109,7 +109,7 @@ pacman -S networkmanager networkmanager-openvpn \
          neovim python-neovim \
          khard khal vdirsyncerr \
          rtorrent youtube-dl beet cmus flatpak ranger imlib2 \
-         pulseaudio pulseaudio-bluetooth pulseaudio-jack bluez \
+         pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer bluez \
          sway i3status dunst imagemagick \
          noto-fonts-emoji ttf-hack awesome-terminal-fonts \
          termite libreoffice-fresh vlc firefox
