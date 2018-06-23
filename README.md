@@ -1,4 +1,6 @@
-# Arch Linux Installation
+#git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si Arch Linux Installation
 
 ## Pre-Installation
 
@@ -49,12 +51,6 @@ mount /dev/sda1 /mnt/boot/EFI
 /etc/pacman.conf
 
 ---------------------
-
-#add to bottom of file:
-
-[archlinuxfr]
-    SigLevel = Never
-    Server = http://repo.archlinux.fr/$arch
 
 #Move the best mirror to the top (the one at your country?)
 
@@ -115,6 +111,15 @@ pacman -S networkmanager networkmanager-openvpn \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
          blueman \
          termite libreoffice-fresh vlc firefox eog evince
+```
+
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+yay -S brightnessctl hstr-git j4-dmenu-desktop postman-bin \
+    python-discogs-client
 ```
 
 ## Configure it
