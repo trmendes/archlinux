@@ -93,7 +93,7 @@ pacman -S networkmanager networkmanager-openvpn \
          rust \
          lua \
          jdk8-openjdk \
-         android-udev \
+         android-udev android-file-transfer \
          python python-requests python-pip \
          nodejs mongodb yarn eslint \
          hugo \
@@ -109,6 +109,7 @@ pacman -S networkmanager networkmanager-openvpn \
          bluez \
          sway i3status dunst imagemagick \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
+         ttf-font-awesome ttf-ionicons \
          blueman \
          termite libreoffice-fresh vlc firefox eog evince
 ```
