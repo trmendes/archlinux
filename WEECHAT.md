@@ -64,7 +64,7 @@
 /set weechat.bar.nicklist.size_max 14
 /set weechat.bar.nicklist.size 14
 # Install iset.pl script manager:
-/script install iset.pl go.py colorize_nicks.py autosort.py highmon.pl
+/script install iset.pl go.py colorize_nicks.py autosort.py highmon.pl emoji.lua
 
 # Highmon
 /set plugins.var.perl.highmon.alignment "nchannel"

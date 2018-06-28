@@ -85,6 +85,7 @@ pacman -S networkmanager networkmanager-openvpn \
          bash-completion \
          openssh \
          udiskie \
+         ntfs-3g \
          ufw sudo \
          git tig \
          php \
@@ -97,7 +98,7 @@ pacman -S networkmanager networkmanager-openvpn \
          python python-requests python-pip \
          nodejs mongodb yarn eslint \
          hugo \
-         qemu \
+         virtualbox \
          tmux htop pass pass-otp exa expac tldr \
          neomutt w3m \
          aspell \
