@@ -94,7 +94,7 @@ pacman -S networkmanager networkmanager-openvpn \
          rust \
          lua \
          jdk8-openjdk \
-         android-udev android-file-transfer \
+         android-udev \
          python python-requests python-pip \
          nodejs mongodb yarn eslint \
          hugo \
