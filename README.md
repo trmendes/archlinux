@@ -112,7 +112,7 @@ pacman -S networkmanager networkmanager-openvpn \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
          ttf-font-awesome ttf-ionicons \
          blueman \
-         termite libreoffice-fresh vlc firefox feh evince
+         termite libreoffice-fresh vlc firefox feh evince eog
 ```
 
 ```
