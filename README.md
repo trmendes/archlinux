@@ -190,7 +190,8 @@ QT_IM_MODULE=cedilla
 ---------------------
 
 options uvcvideo nodrop=1
-options uvcvideo quirks=0x100
+options uvcvideo timeout=5000
+options uvcvideo quirks=0x80
 ```
 
 ### Sound config
