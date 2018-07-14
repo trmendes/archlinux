@@ -88,7 +88,6 @@ pacman -S networkmanager networkmanager-openvpn \
          ntfs-3g \
          ufw sudo \
          git tig \
-         php \
          gdb ctags cscope clang \
          meson ninja \
          rust \
@@ -111,8 +110,9 @@ pacman -S networkmanager networkmanager-openvpn \
          sway i3status dunst imagemagick \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
          ttf-font-awesome ttf-ionicons \
+         qt-wayland \
          blueman \
-         termite libreoffice-fresh vlc firefox feh evince eog
+         termite libreoffice-fresh vlc firefox evince eog
 ```
 
 ```
