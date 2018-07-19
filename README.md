@@ -112,7 +112,7 @@ pacman -S networkmanager networkmanager-openvpn \
          ttf-font-awesome ttf-ionicons \
          qt-wayland \
          blueberry \
-         termite libreoffice-fresh vlc firefox evince eog
+         termite libreoffice-fresh mpv firefox evince eog
 ```
 
 ```
