@@ -88,7 +88,7 @@ pacman -S networkmanager networkmanager-openvpn \
          ntfs-3g \
          ufw sudo \
          git tig \
-         gdb ctags cscope clang \
+         gdb \
          meson ninja \
          rust \
          lua \
@@ -103,7 +103,7 @@ pacman -S networkmanager networkmanager-openvpn \
          aspell \
          neovim python-neovim \
          khard khal vdirsyncer \
-         rtorrent youtube-dl beets flatpak ranger imlib2 \
+         rtorrent youtube-dl beets flatpak ranger \
          mpd ncmpcpp mpc \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          bluez \
