@@ -78,6 +78,7 @@ arch-chroot /mnt
 
 ```
 pacman -S networkmanager networkmanager-openvpn \
+         xorg-server-xwayland \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          grub efibootmgr intel-ucode \
