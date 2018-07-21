@@ -107,6 +107,7 @@ pacman -S networkmanager networkmanager-openvpn \
          rtorrent youtube-dl beets flatpak ranger \
          mpd ncmpcpp mpc \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
+         alsa-utils \
          bluez \
          sway i3status dunst imagemagick \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
