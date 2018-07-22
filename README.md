@@ -236,17 +236,6 @@ KEYMAP=us-acentos
 SUBSYSTEM=="usb", ATTRS{idVendor}=="04f3", ATTRS{idProduct}=="20d0", ATTR{authorized}="0"
 ```
 
-### Access to change the bright of your screen
-
-```
-/etc/udev/rules.d/90-backlight.rules
-
----------------------
-
-ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness"
-ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
-```
-
 ### Suspend the system when battery drops to 10%
 
 ```
