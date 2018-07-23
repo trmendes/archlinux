@@ -85,7 +85,8 @@ pacman -S networkmanager networkmanager-openvpn \
          lm_sensors acpi acpid tlp tlp-rdw thermald \
          bash-completion \
          openssh \
-         udiskie \
+         pkgfile \
+         udevil \
          ntfs-3g \
          ufw sudo \
          git tig \
