@@ -102,7 +102,7 @@ pacman -S networkmanager networkmanager-openvpn \
          virtualbox \
          tmux htop pass pass-otp exa expac tldr \
          neomutt w3m \
-         aspell \
+         aspell graphviz \
          neovim python-neovim \
          khard khal vdirsyncer \
          rtorrent youtube-dl beets flatpak ranger \
