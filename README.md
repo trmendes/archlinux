@@ -206,6 +206,21 @@ options uvcvideo quirks=0x100
 
 options snd_hda_intel index=1,0
 ```
+
+### Bluetooth config
+
+```
+/etc/bluetooth/audio.conf
+---------------------
+AutoEnable=false
+
+/etc/bluetooth/audio.con
+---------------------
+Enable=Source,Sink,Media,Socket
+
+```
+
+
 ### Beep off
 
 ```
