@@ -106,7 +106,7 @@ pacman -S networkmanager networkmanager-openvpn \
          neovim python-neovim \
          khard khal vdirsyncer \
          rtorrent youtube-dl beets flatpak ranger \
-         mpd ncmpcpp mpc \
+         mpd ncmpcpp mpc subdl \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          alsa-utils \
          bluez \
