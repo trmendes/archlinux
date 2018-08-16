@@ -123,8 +123,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-yay -S brightnessctl hstr-git j4-dmenu-desktop \
-    python-discogs-client
+yay -S brightnessctl j4-dmenu-desktop
 ```
 
 ## Configure it
