@@ -99,8 +99,8 @@ pacman -S networkmanager networkmanager-openvpn \
          python python-requests python-pip \
          nodejs mongodb yarn eslint \
          hugo \
-         virtualbox \
          tmux htop pass pass-otp exa expac tldr \
+         weechat python2-websocket-client python2-six \
          neomutt w3m \
          aspell graphviz \
          neovim python-neovim \
