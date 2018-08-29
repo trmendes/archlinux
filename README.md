@@ -76,6 +76,8 @@ arch-chroot /mnt
 
 ## Instal packs
 
+### Pacman
+
 ```
 pacman -S networkmanager networkmanager-openvpn \
          xorg-server-xwayland \
@@ -118,12 +120,23 @@ pacman -S networkmanager networkmanager-openvpn \
          termite libreoffice-fresh mpv firefox evince eog
 ```
 
+### AUR
+
 ```
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
 yay -S brightnessctl j4-dmenu-desktop
+```
+
+### Flatpak
+
+```
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub com.getpostman.Postman
+flatpak install flathub org.signal.Signal
 ```
 
 ## Configure it
@@ -405,3 +418,13 @@ pinentry-program /usr/bin/pinentry-curses
 
 To get rid of Pocket, Firefox users should head to about:config and set the
 extensions.pocket.enabled preference to false.
+
+### Android Studio
+
+* Android Studio – No space left on device
+
+```
+# Solution – temporarily increase the size of the /tmp partition
+
+sudo mount -o remount,size=8G,noatime /tmp;
+```
