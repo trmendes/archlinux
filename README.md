@@ -345,9 +345,9 @@ systemclt enable acpid
 systemctl enable ufw
 systemctl enable tlp
 systemctl enable tlp-sleep
-systemctl enable bluetooth
 systemctl enable networkmanager
 
+systemctl disable bluetooth.service
 systemctl disable dhcpcd@.service
 systemctl disable man-db.service
 
