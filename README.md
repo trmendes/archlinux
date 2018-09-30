@@ -187,6 +187,21 @@ echo "caranguejo" > /etc/hostname
 
 ```
 
+```
+sudo nvim /etc/resolve.conf
+---------------------
+nameserver 1.1.1.1
+nameserver 1.0.0.1
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+```
+
+```
+sudo nvim /etc/NetworkManager/NetworkManager.conf
+---------------------
+dns=none
+```
+
 ### Environment
 
 ```
