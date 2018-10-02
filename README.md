@@ -104,7 +104,8 @@ pacman -S networkmanager networkmanager-openvpn \
          tmux htop pass pass-otp exa expac tldr \
          weechat python2-websocket-client python2-six \
          neomutt w3m \
-         aspell graphviz \
+         aspell aspell-pt aspell-en aspell-it aspell-es \
+         graphviz \
          neovim python-neovim \
          khard khal vdirsyncer \
          rtorrent youtube-dl beets flatpak ranger \
