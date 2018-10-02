@@ -117,7 +117,7 @@ pacman -S networkmanager networkmanager-openvpn \
          ttf-font-awesome ttf-ionicons \
          qt-wayland \
          blueberry \
-         claws-mail \
+         claws-mail wireshark-gtk \
          termite libreoffice-fresh mpv firefox evince eog
 ```
 
