@@ -103,7 +103,6 @@ pacman -S networkmanager networkmanager-openvpn \
          hugo \
          tmux htop pass pass-otp exa expac tldr \
          weechat python2-websocket-client python2-six \
-         neomutt w3m \
          aspell aspell-pt aspell-en aspell-it aspell-es \
          graphviz \
          neovim python-neovim \
@@ -118,6 +117,7 @@ pacman -S networkmanager networkmanager-openvpn \
          ttf-font-awesome ttf-ionicons \
          qt-wayland \
          blueberry \
+         claws-mail \
          termite libreoffice-fresh mpv firefox evince eog
 ```
 
