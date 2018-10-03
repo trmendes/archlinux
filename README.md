@@ -107,7 +107,7 @@ pacman -S networkmanager networkmanager-openvpn \
          graphviz \
          neovim python-neovim \
          khard khal vdirsyncer \
-         rtorrent youtube-dl beets flatpak ranger \
+         rtorrent youtube-dl beets ranger \
          mpd ncmpcpp mpc subdl \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          alsa-utils \
@@ -129,15 +129,6 @@ cd yay
 makepkg -si
 
 yay -S brightnessctl j4-dmenu-desktop
-```
-
-### Flatpak
-
-```
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-flatpak install flathub com.getpostman.Postman
-flatpak install flathub org.signal.Signal
 ```
 
 ## Configure it
