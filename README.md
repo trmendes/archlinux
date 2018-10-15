@@ -117,7 +117,7 @@ pacman -S networkmanager networkmanager-openvpn \
          ttf-font-awesome ttf-ionicons \
          qt-wayland \
          blueberry \
-         claws-mail wireshark-gtk \
+         thunderbird wireshark-gtk \
          termite libreoffice-fresh mpv firefox evince eog
 ```
 
@@ -207,7 +207,7 @@ QT_IM_MODULE=cedilla
 
 options uvcvideo nodrop=1
 options uvcvideo timeout=5000
-options uvcvideo quirks=0x100
+options uvcvideo quirks=128
 ```
 
 ### Sound config
