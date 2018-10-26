@@ -165,7 +165,7 @@ locale-gen
 ### Network
 
 ```
-echo "caranguejo" > /etc/hostname
+echo "caramujo" > /etc/hostname
 ```
 
 ```
@@ -175,7 +175,7 @@ echo "caranguejo" > /etc/hostname
 
 127.0.0.1	localhost
 ::1         localhost
-127.0.1.1	caranguejo.local
+127.0.1.1	caramujo.local
 
 ```
 
