@@ -88,9 +88,13 @@ mv wee_slack.py ~/.weechat/python/autoload
 /secure set freenode_password xxxxxxx
 /set irc.server.freenode.sasl_password "${sec.data.freenode_password}"
 
+### Configure GIMP-IRC
+/server add gnome irc.gimp.org/6697 -ssl
+/secure set gnome_password xxxxxx
+/set irc.server.gnome.sasl_password "${sec.data.gnome_password}"
+
 ### Configure Wee-Slack
 /secure passphrase type_a_secure_password
 /secure set slack_token [YOUR_SLACK_TOKEN1],[YOUR_SLACK_TOKEN_N]
 /set plugins.var.python.slack.slack_api_token ${sec.data.slack_token}
 /python reload slack
-
