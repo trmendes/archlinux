@@ -106,19 +106,18 @@ pacman -S networkmanager networkmanager-openvpn \
          aspell aspell-pt aspell-en aspell-it aspell-es \
          graphviz \
          neovim python-neovim \
-         khard khal vdirsyncer \
          rtorrent youtube-dl beets ranger \
          mpd ncmpcpp mpc subdl \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          alsa-utils \
          bluez \
-         sway i3status dunst imagemagick \
+         dunst imagemagick \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
          ttf-font-awesome ttf-ionicons \
          qt-wayland \
          blueberry \
          thunderbird wireshark-gtk \
-         termite libreoffice-fresh mpv firefox evince eog
+         termite libreoffice-fresh mpv firefox evince eog gimp
 ```
 
 ### AUR
