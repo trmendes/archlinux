@@ -98,7 +98,7 @@ pacman -S networkmanager networkmanager-openvpn \
          lua \
          jdk8-openjdk \
          android-udev \
-         python python-requests python-pip \
+         python python-requests python-pip flake8 mypy \
          nodejs mongodb yarn eslint \
          hugo \
          tmux htop pass pass-otp exa expac tldr \
