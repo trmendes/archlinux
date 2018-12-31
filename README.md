@@ -107,7 +107,7 @@ pacman -S networkmanager networkmanager-openvpn \
          graphviz \
          neovim python-neovim \
          rtorrent youtube-dl beets ranger \
-         mpd ncmpcpp mpc subdl \
+         subdl moc \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          alsa-utils \
          bluez \
