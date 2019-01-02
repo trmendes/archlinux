@@ -99,14 +99,14 @@ pacman -S networkmanager networkmanager-openvpn \
          jdk8-openjdk \
          android-udev \
          python python-requests python-pip flake8 mypy \
-         nodejs mongodb yarn eslint \
+         nodejs \
          hugo \
          tmux htop pass pass-otp exa expac tldr \
          weechat python2-websocket-client python2-six \
          aspell aspell-pt aspell-en aspell-it aspell-es \
-         graphviz \
          neovim python-neovim \
-         rtorrent youtube-dl beets ranger \
+         rtorrent youtube-dl beets \
+         nnn \
          subdl moc \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          alsa-utils \
@@ -117,7 +117,7 @@ pacman -S networkmanager networkmanager-openvpn \
          qt-wayland \
          blueberry \
          thunderbird wireshark-gtk \
-         termite libreoffice-fresh mpv firefox evince eog gimp
+         termite libreoffice-fresh mpv firefox imv mupdf
 ```
 
 ### AUR
