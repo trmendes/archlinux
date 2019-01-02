@@ -106,7 +106,7 @@ pacman -S networkmanager networkmanager-openvpn \
          aspell aspell-pt aspell-en aspell-it aspell-es \
          neovim python-neovim \
          rtorrent youtube-dl beets \
-         nnn \
+         ranger \
          subdl moc \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          alsa-utils \
