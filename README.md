@@ -92,8 +92,8 @@ pacman -S networkmanager networkmanager-openvpn \
          ntfs-3g \
          ufw sudo \
          git tig \
-         gdb \
-         meson ninja \
+         gcc scdoc gdb \
+         meson ninja cmake \
          rust \
          lua \
          jdk8-openjdk \
