@@ -75,7 +75,7 @@
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          grub efibootmgr intel-ucode \
-	 dnsmasq dnscrypt-proxy \
+         dnsmasq dnscrypt-proxy \
          lm_sensors acpi acpid tlp tlp-rdw thermald \
          bash-completion \
          openssh \
