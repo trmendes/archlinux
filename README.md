@@ -1,13 +1,9 @@
-#git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si Arch Linux Installation
-
 ## Pre-Installation
 
 ### Connect to a wifi network
 
 ```
-wifi-menu
+# wifi-menu
 ```
 
 > I've updated my wifi-card to make it more compatible with my Linux machinie
@@ -17,30 +13,30 @@ wifi-menu
 ### Enable NTP
 
 ```
-timedatectl set-ntp true
+# timedatectl set-ntp true
 ```
 
 ### Configure your disk
 
 ```
-gfisk /dev/sda
+# gfisk /dev/sda
 ```
 
 ### Format your disk and swap on
 
 ```
-mkfs.fat -F32 /dev/sda1
-mkswap -L "swap" /dev/sda2
-swapon /dev/sda2
-mkfs.ext4 -L arch /dev/sda3
+# mkfs.fat -F32 /dev/sda1
+# mkswap -L "swap" /dev/sda2
+# swapon /dev/sda2
+# mkfs.ext4 -L arch /dev/sda3
 ```
 
 ### mount disks
 
 ```
-mount /dev/sda3 /mnt
-mkdir -p /mnt/boot/EFI
-mount /dev/sda1 /mnt/boot/EFI
+# mount /dev/sda3 /mnt
+# mkdir -p /mnt/boot/EFI
+# mount /dev/sda1 /mnt/boot/EFI
 ```
 
 ## Installation
@@ -49,29 +45,24 @@ mount /dev/sda1 /mnt/boot/EFI
 
 ```
 /etc/pacman.conf
-
 ---------------------
-
-#Move the best mirror to the top (the one at your country?)
-
----------------------
-
-#uncomment multilib
-#uncomment color
-#add ILoveCandy
+# Move the best mirror to the top (the one at your country?)
+# uncomment multilib
+# uncomment color
+# add ILoveCandy
 ```
 
 ### Packs to install
 
 ```
-pacstrap /mnt base base-devel
+# pacstrap /mnt base base-devel
 ```
 
 ### Create the fstab file and start arch to configure it
 
 ```
-genfstab -p /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
+# genfstab -p /mnt >> /mnt/etc/fstab
+# arch-chroot /mnt
 ```
 
 ## Instal packs
@@ -79,11 +70,12 @@ arch-chroot /mnt
 ### Pacman
 
 ```
-pacman -S networkmanager networkmanager-openvpn \
+# pacman -S networkmanager networkmanager-openvpn \
          xorg-server-xwayland \
          xf86-input-libinput xf86-video-intel xclip \
          xdg-user-dirs \
          grub efibootmgr intel-ucode \
+	 dnsmasq dnscrypt-proxy \
          lm_sensors acpi acpid tlp tlp-rdw thermald \
          bash-completion \
          openssh \
@@ -124,11 +116,11 @@ pacman -S networkmanager networkmanager-openvpn \
 ### AUR
 
 ```
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+# git clone https://aur.archlinux.org/yay.git
+# cd yay
+# makepkg -si
 
-yay -S brightnessctl j4-dmenu-desktop
+# yay -S brightnessctl j4-dmenu-desktop
 ```
 
 ## Configure it
@@ -136,50 +128,72 @@ yay -S brightnessctl j4-dmenu-desktop
 ### Timezone
 
 ```
-ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
-hwclock --systohc
+# ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+# hwclock --systohc
 ```
 
 ### Locale
 
 ```
 /etc/locale.conf
-
 ---------------------
-
 LANG=en_US.UTF-8
 ```
 
 ```
 /etc/locale.gen
-
 ---------------------
-
 LANG=en_US.UTF-8
 ```
 
 ```
-locale-gen
+# locale-gen
 ```
 
 ### Network
 
 ```
-echo "caramujo" > /etc/hostname
+# echo "caramujo" > /etc/hostname
 ```
 
 ```
 /etc/hosts
-
 ---------------------
-
 127.0.0.1	localhost
-::1         localhost
+::1             localhost
 127.0.1.1	caramujo.local
 
 ```
 
-# Powerbutton to suspend
+```
+/etc/resolv.conf
+---------------------
+nameserver ::1
+nameserver 127.0.0.1
+options edns0 single-request-reopen
+```
+
+```
+# chattr +i /etc/resolv.conf
+```
+
+```
+/etc/dnscrypt-proxy/dnscrypt-proxy.toml
+---------------------
+server_names = ['cloudflare', 'cloudflare-ipv6']
+listen_addresses = ['127.0.0.1:53000', '[::1]:53000']
+```
+
+```
+/etc/dnsmasq.conf
+---------------------
+no-resolv
+server=::1#53000
+server=127.0.0.1#53000
+listen-address=::1,127.0.0.1
+```
+
+### Powerbutton to suspend
 
 ```
 sudo nvim /etc/systemd/logind.conf
@@ -191,9 +205,7 @@ HandlePowerKey=suspend
 
 ```
 /etc/environment
-
 ---------------------
-
 GTK_IM_MODULE=cedilla
 QT_IM_MODULE=cedilla
 ```
@@ -203,7 +215,6 @@ QT_IM_MODULE=cedilla
 ```
 /etc/modprobe.d/ucvideo.conf
 ---------------------
-
 options uvcvideo nodrop=1
 options uvcvideo timeout=5000
 options uvcvideo quirks=128
@@ -213,9 +224,7 @@ options uvcvideo quirks=128
 
 ```
 /etc/modprobe.d/intel-hda.conf
-
 ---------------------
-
 options snd_hda_intel index=1,0
 ```
 
@@ -225,21 +234,20 @@ options snd_hda_intel index=1,0
 /etc/bluetooth/audio.conf
 ---------------------
 AutoEnable=false
+```
 
+```
 /etc/bluetooth/audio.con
 ---------------------
 Enable=Source,Sink,Media,Socket
 
 ```
 
-
 ### Beep off
 
 ```
 /etc/inputrc
-
 ---------------------
-
 set bell-style none
 ```
 
@@ -247,9 +255,7 @@ set bell-style none
 
 ```
 /etc/vconsole.conf
-
 ---------------------
-
 FONT=latarcyrheb-sun32
 KEYMAP=us-acentos
 ```
@@ -258,9 +264,7 @@ KEYMAP=us-acentos
 
 ```
 /etc/udev/rules.d/80-touchscreen.rules
-
 ---------------------
-
 SUBSYSTEM=="usb", ATTRS{idVendor}=="04f3", ATTRS{idProduct}=="20d0", ATTR{authorized}="0"
 ```
 
@@ -268,9 +272,7 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="04f3", ATTRS{idProduct}=="20d0", ATTR{author
 
 ```
 /etc/udev/rules.d/99-lowbat.rules
-
 ---------------------
-
 SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-10]", RUN+="/usr/bin/systemctl hibernate"
 ```
 
@@ -278,9 +280,7 @@ SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-10]"
 
 ```
 /etc/modprobe.d/psmouse-blacklist.conf
-
 ---------------------
-
 blacklist psmouse
 ```
 
@@ -288,9 +288,7 @@ blacklist psmouse
 
 ```
 /etc/systemd/journald.conf
-
 ---------------------
-
 SystemMaxUse=50M
 ```
 
@@ -298,9 +296,7 @@ SystemMaxUse=50M
 
 ```
 /etc/defaults/grub
-
 ---------------------
-
 GRUB_TIMEOUT=0
 GRUB_GFXMODE=1024x768
 GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force"
@@ -310,50 +306,50 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force"
 ### Buld initramfs and install Grub
 
 ```
-mkinitcpio -p linux
-grub-mkconfig -o /boot/grub/grub.cfg
-grub-install --recheck /dev/sda
+# mkinitcpio -p linux
+# grub-mkconfig -o /boot/grub/grub.cfg
+# grub-install --recheck /dev/sda
 ```
 
 ### ufw config
 
 ```
-ufw enable
-ufw default allow outgoing
-ufw default deny incoming
-```
-```
-ufw allow Deluge
-ufw allow syncthing
-ufw allow syncthing-gui
+# ufw enable
+# ufw default allow outgoing
+# ufw default deny incoming
+# ufw allow Deluge
+# ufw allow syncthing
+# ufw allow syncthing-gui
 ```
 
 ### Adding an user
 
 ```
-useradd -m -g users -s /bin/sh <username>
-passwd <username>
-echo '<username> ALL=(ALL) ALL' > /etc/sudoers.d/<username>
-gpasswd -a username network,wheel,storage,video,libvirt,systemd-journal
+# useradd -m -g users -s /bin/sh <username>
+# passwd <username>
+# echo '<username> ALL=(ALL) ALL' > /etc/sudoers.d/<username>
+# gpasswd -a username network,wheel,storage,video,libvirt,systemd-journal
 ```
 
 ### Services
 
 ```
-systemctl enable thermald
-systemclt enable acpid
-systemctl enable ufw
-systemctl enable tlp
-systemctl enable tlp-sleep
-systemctl enable networkmanager
+# systemctl enable thermald
+# systemclt enable acpid
+# systemctl enable ufw
+# systemctl enable tlp
+# systemctl enable tlp-sleep
+# systemctl enable dnsmasq
+# systemctl enable dnscrypt-proxy.service
+# systemctl enable networkmanager
 
-systemctl disable bluetooth.service
-systemctl disable dhcpcd@.service
-systemctl disable man-db.service
+# systemctl disable dhcpcd@.service
+# systemctl disable man-db.service
 
-systemctl mask systemd-rfkill
-systemctl mask systemd-rfkill.socket
-systemctl mask geoclue
+# systemctl mask lvm2-monitor.service
+# systemctl mask systemd-rfkill
+# systemctl mask systemd-rfkill.socket
+# systemctl mask geoclue
 ```
 
 ### Root Access
@@ -361,19 +357,19 @@ systemctl mask geoclue
 * [INFO] If you want to disable the root access try this next command
 
 ```
-passwd -l root
+# passwd -l root
 ```
 
 * [INFO] If you want to bring it back try this next command
 
 ```
-passwd root
+# passwd root
 ```
 
 ### Python modules
 
 ```
-pip install pip-autoremove
+# pip install pip-autoremove
 ```
 
 ## Do this as a user
@@ -381,50 +377,16 @@ pip install pip-autoremove
 ### Neovim plugin manager
 
 ```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+# curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
-
-### Neovim NPM
-```
-sudo npm install -g neovim
-```
-
-### Gnome config
-
- * Keyboard: English (US, intl, with dead keys)
-
-### Bash config
-
-```
-cd ~ && git clone https://github.com/michaeldfallen/git-radar .git-radar
-```
-
-### GPG Config
-
-```
-.gnupg/gpg-agent.conf
-----------------------
-# PIN entry program
-# pinentry-program /usr/bin/pinentry-gnome3
-# pinentry-program /usr/bin/pinentry-qt
-# pinentry-program /usr/bin/pinentry-kwallet
-# pinentry-program /usr/bin/pinentry-gtk-2
-
-pinentry-program /usr/bin/pinentry-curses
-```
-
-### Firefox
-
-To get rid of Pocket, Firefox users should head to about:config and set the
-extensions.pocket.enabled preference to false.
 
 ### Android Studio
 
 * Android Studio – No space left on device
 
-```
-# Solution – temporarily increase the size of the /tmp partition
+> Solution – temporarily increase the size of the /tmp partition
 
-sudo mount -o remount,size=8G,noatime /tmp;
+```
+# sudo mount -o remount,size=8G,noatime /tmp;
 ```
