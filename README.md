@@ -97,7 +97,7 @@
          weechat python2-websocket-client python2-six \
          aspell aspell-pt aspell-en aspell-it aspell-es \
          neovim python-neovim \
-         rtorrent youtube-dl beets \
+         youtube-dl beets \
          ranger \
          repgrip fd z \
          subdl moc \
@@ -108,6 +108,7 @@
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
          ttf-font-awesome ttf-ionicons \
          qt-wayland \
+         transmission-gtk \
          blueberry \
          thunderbird wireshark-gtk \
          termite libreoffice-fresh mpv firefox imv mupdf
@@ -182,6 +183,7 @@ options edns0 single-request-reopen
 ---------------------
 server_names = ['cloudflare', 'cloudflare-ipv6']
 listen_addresses = ['127.0.0.1:53000', '[::1]:53000']
+require_dnssec = true
 ```
 
 ```
@@ -191,8 +193,9 @@ no-resolv
 server=::1#53000
 server=127.0.0.1#53000
 listen-address=::1,127.0.0.1
+conf-file=/usr/share/dnsmasq/trust-anchors.conf
+dnssec
 ```
-
 ### Powerbutton to suspend
 
 ```
@@ -317,7 +320,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force"
 # ufw enable
 # ufw default allow outgoing
 # ufw default deny incoming
-# ufw allow Deluge
+# ufw allow Transmission
 # ufw allow syncthing
 # ufw allow syncthing-gui
 ```
@@ -389,4 +392,9 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force"
 
 ```
 # sudo mount -o remount,size=8G,noatime /tmp;
+```
+### Transmission-Gtk blocklist
+
+```
+http://john.bitsurge.net/public/biglist.p2p.gz
 ```
