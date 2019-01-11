@@ -111,7 +111,7 @@
          transmission-gtk \
          blueberry \
          thunderbird wireshark-gtk \
-         termite libreoffice-fresh mpv firefox imv mupdf
+         kitty libreoffice-fresh mpv firefox imv mupdf
 ```
 
 ### AUR
