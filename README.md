@@ -104,7 +104,7 @@
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          alsa-utils \
          bluez \
-         dunst imagemagick \
+         dunst rofi imagemagick \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
          ttf-font-awesome ttf-ionicons \
          qt-wayland \
@@ -121,7 +121,7 @@
 # cd yay
 # makepkg -si
 
-# yay -S brightnessctl j4-dmenu-desktop
+# yay -S brightnessctl
 ```
 
 ## Configure it
