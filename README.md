@@ -292,7 +292,7 @@ blacklist psmouse
 ```
 /etc/systemd/journald.conf
 ---------------------
-SystemMaxUse=50M
+SystemMaxUse=10M
 ```
 
 ### Grub
