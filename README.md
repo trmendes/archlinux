@@ -98,7 +98,7 @@
          aspell aspell-pt aspell-en aspell-it aspell-es \
          neovim python-neovim \
          youtube-dl beets \
-         ranger w3m ffmpegthumbnailer highlight \
+         ranger w3m ffmpegthumbnailer highlight odt2txt \
          repgrip fd z \
          subdl moc \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
