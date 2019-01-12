@@ -293,6 +293,7 @@ blacklist psmouse
 /etc/systemd/journald.conf
 ---------------------
 Storage=none
+SystemMaxUse=10M
 RuntimeMaxUse=10M
 ```
 
