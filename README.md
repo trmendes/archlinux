@@ -204,15 +204,6 @@ sudo nvim /etc/systemd/logind.conf
 HandlePowerKey=suspend
 ```
 
-### Environment
-
-```
-/etc/environment
----------------------
-GTK_IM_MODULE=cedilla
-QT_IM_MODULE=cedilla
-```
-
 ### Webcam config
 
 ```
