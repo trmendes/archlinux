@@ -93,7 +93,7 @@
          python python-requests python-pip flake8 mypy \
          nodejs \
          hugo \
-         tmux htop pass pass-otp exa expac tldr \
+         htop pass pass-otp exa expac tldr \
          weechat python2-websocket-client python2-six \
          aspell aspell-pt aspell-en aspell-it aspell-es \
          neovim python-neovim \
