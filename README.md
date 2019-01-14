@@ -72,16 +72,20 @@
 ```
 # pacman -S networkmanager networkmanager-openvpn \
          xorg-server-xwayland \
-         xf86-input-libinput xf86-video-intel xclip \
+         xf86-input-libinput xf86-video-intel \
          xdg-user-dirs \
-         grub efibootmgr intel-ucode \
+         qt-wayland \
+         xclip \
+         grub efibootmgr \
+         intel-ucode \
+         pkgfile \
          dnsmasq dnscrypt-proxy \
          lm_sensors acpi acpid tlp tlp-rdw thermald \
-         bash-completion \
-         openssh \
-         pkgfile \
          udevil \
          ntfs-3g \
+         bluez \
+         bash-completion \
+         openssh \
          ufw sudo \
          git tig \
          gcc scdoc gdb \
@@ -89,29 +93,31 @@
          rust \
          lua \
          jdk8-openjdk \
-         android-udev \
          python python-requests python-pip flake8 mypy \
          nodejs \
          hugo \
-         htop pass pass-otp exa expac tldr \
-         weechat python2-websocket-client python2-six \
-         aspell aspell-pt aspell-en aspell-it aspell-es \
-         neovim python-neovim \
-         youtube-dl beets \
-         ranger w3m ffmpegthumbnailer highlight odt2txt \
+         android-udev \
          repgrip fd z \
-         subdl moc \
-         pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
-         alsa-utils \
-         bluez \
-         dunst rofi imagemagick \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
          ttf-font-awesome ttf-ionicons \
-         qt-wayland \
-         transmission-gtk \
+         neovim python-neovim \
+         aspell aspell-pt aspell-en aspell-it aspell-es \
+         pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
+         alsa-utils \
+         youtube-dl beets \
+         subdl moc \
+         htop pass pass-otp exa expac tldr \
+         kitty \
+         ranger w3m ffmpegthumbnailer highlight odt2txt poppler \
+         dunst rofi \
+         imagemagick \
          blueberry \
-         thunderbird wireshark-gtk \
-         kitty libreoffice-fresh mpv firefox imv mupdf
+         weechat python2-websocket-client python2-six \
+         transmission-gtk \
+         firefox thunderbird \
+         libreoffice-fresh \
+         mpv imv mupdf \
+         wireshark-gtk \
 ```
 
 ### AUR
