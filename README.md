@@ -75,7 +75,7 @@
          xf86-input-libinput xf86-video-intel \
          xdg-user-dirs \
          qt-wayland \
-         xclip \
+         wl-clipboard \
          grub efibootmgr \
          intel-ucode \
          pkgfile \
