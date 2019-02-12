@@ -103,7 +103,7 @@
          neovim python-neovim \
          aspell aspell-pt aspell-en aspell-it aspell-es \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
-         alsa-utils \
+         pulseaudio-alsa alsa-utils \
          youtube-dl beets \
          subdl moc \
          htop pass pass-otp exa expac tldr \
