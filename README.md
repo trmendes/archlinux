@@ -106,7 +106,7 @@
          pulseaudio-alsa alsa-utils \
          youtube-dl beets \
          subdl moc \
-         htop pass pass-otp exa expac tldr \
+         htop pass pass-otp exa bat expac tldr \
          kitty \
          ranger w3m ffmpegthumbnailer highlight odt2txt poppler \
          dunst rofi \
