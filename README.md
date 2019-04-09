@@ -106,6 +106,7 @@
          pulseaudio-alsa alsa-utils \
          youtube-dl beets \
          subdl moc \
+         syncthing \
          htop pass pass-otp exa bat expac tldr \
          kitty \
          ranger w3m ffmpegthumbnailer highlight odt2txt poppler \
@@ -321,7 +322,6 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force"
 # ufw default deny incoming
 # ufw allow Transmission
 # ufw allow syncthing
-# ufw allow syncthing-gui
 ```
 
 ### Adding an user
