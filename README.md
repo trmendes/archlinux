@@ -79,7 +79,7 @@
          grub efibootmgr \
          intel-ucode \
          pkgfile \
-         dnsmasq dnscrypt-proxy \
+         dnsmasq dnscrypt-proxy bind-tools \
          lm_sensors acpi acpid tlp tlp-rdw thermald \
          udevil \
          ntfs-3g \
