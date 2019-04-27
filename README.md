@@ -188,7 +188,7 @@ options edns0 single-request-reopen
 ```
 /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 ---------------------
-server_names = ['cloudflare', 'cloudflare-ipv6']
+server_names = ['soltysiak'] # For Poland
 listen_addresses = ['127.0.0.1:53000', '[::1]:53000']
 require_dnssec = true
 ```
