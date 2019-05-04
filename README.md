@@ -79,7 +79,7 @@
          grub efibootmgr \
          intel-ucode \
          pkgfile \
-         dnsmasq dnscrypt-proxy bind-tools \
+         bind-tools \
          lm_sensors acpi acpid tlp tlp-rdw thermald \
          udevil \
          ntfs-3g \
@@ -112,7 +112,7 @@
          ranger w3m ffmpegthumbnailer highlight odt2txt poppler \
          dunst rofi \
          imagemagick \
-         blueberry \
+         blueman \
          weechat python2-websocket-client python2-six \
          transmission-gtk \
          firefox thunderbird \
@@ -173,36 +173,6 @@ LANG=en_US.UTF-8
 
 ```
 
-```
-/etc/resolv.conf
----------------------
-nameserver ::1
-nameserver 127.0.0.1
-options edns0 single-request-reopen
-```
-
-```
-# chattr +i /etc/resolv.conf
-```
-
-```
-/etc/dnscrypt-proxy/dnscrypt-proxy.toml
----------------------
-server_names = ['soltysiak'] # For Poland
-listen_addresses = ['127.0.0.1:53000', '[::1]:53000']
-require_dnssec = true
-```
-
-```
-/etc/dnsmasq.conf
----------------------
-no-resolv
-server=::1#53000
-server=127.0.0.1#53000
-listen-address=::1,127.0.0.1
-conf-file=/usr/share/dnsmasq/trust-anchors.conf
-dnssec
-```
 ### Powerbutton to suspend
 
 ```
