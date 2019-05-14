@@ -74,13 +74,11 @@
          xorg-server-xwayland \
          xf86-input-libinput xf86-video-intel \
          xdg-user-dirs \
-         qt-wayland \
-         wl-clipboard \
          grub efibootmgr \
          intel-ucode \
          pkgfile \
          bind-tools \
-         lm_sensors acpi acpid tlp tlp-rdw thermald \
+         lm_sensors acpi acpid tlp tlp-rdw \
          udevil \
          ntfs-3g \
          bluez \
@@ -97,7 +95,6 @@
          nodejs \
          hugo \
          android-udev \
-         repgrip fd z \
          noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
          ttf-font-awesome ttf-ionicons \
          neovim python-neovim \
@@ -107,9 +104,11 @@
          youtube-dl beets \
          subdl moc \
          syncthing \
+         repgrip fd \
          htop pass pass-otp exa bat expac tldr \
-         kitty \
          ranger w3m ffmpegthumbnailer highlight odt2txt poppler \
+         wl-clipboard \
+         kitty \
          dunst rofi \
          imagemagick \
          blueman \
@@ -118,7 +117,7 @@
          firefox thunderbird \
          libreoffice-fresh \
          mpv imv mupdf \
-         wireshark-gtk \
+         wireshark-gtk wifite
 ```
 
 ### AUR
