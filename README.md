@@ -47,8 +47,8 @@
 /etc/pacman.conf
 ---------------------
 # Move the best mirror to the top (the one at your country?)
-# uncomment multilib
-# uncomment color
+# sed -i 's/#multilib/multilib/' /etc/pacman.conf
+# sed -i 's/#color/color/' /etc/pacman.conf
 # add ILoveCandy
 ```
 
@@ -144,13 +144,13 @@
 ```
 /etc/locale.conf
 ---------------------
-LANG=en_US.UTF-8
+echo LANG=en_US.UTF-8 > /etc/locale.conf
 ```
 
 ```
 /etc/locale.gen
 ---------------------
-LANG=en_US.UTF-8
+sed -i "s/#en_US.UTF-8/en_US.UTF-8/" /etc/locale.gen
 ```
 
 ```
