@@ -161,7 +161,7 @@ sed -i "s/#en_US.UTF-8/en_US.UTF-8/" /etc/locale.gen
 ### Network
 
 ```
-# echo "caramujo" > /etc/hostname
+# echo "amora" > /etc/hostname
 ```
 
 ```
