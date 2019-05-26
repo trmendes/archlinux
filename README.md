@@ -123,11 +123,12 @@
 ### AUR
 
 ```
-# git clone https://aur.archlinux.org/yay.git
-# cd yay
-# makepkg -si
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
-# yay -S brightnessctl
+yay -S brightnessctl
+yay -S djmount
 ```
 
 ## Configure it
@@ -135,8 +136,8 @@
 ### Timezone
 
 ```
-# ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
-# hwclock --systohc
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+hwclock --systohc
 ```
 
 ### Locale
