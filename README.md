@@ -106,7 +106,7 @@
          syncthing \
          repgrip fd \
          htop pass pass-otp exa bat expac tldr \
-         ranger w3m ffmpegthumbnailer highlight odt2txt poppler \
+         ranger ffmpegthumbnailer highlight odt2txt poppler \
          wl-clipboard \
          kitty \
          dunst rofi \
