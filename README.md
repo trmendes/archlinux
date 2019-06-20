@@ -117,7 +117,8 @@
          firefox thunderbird \
          libreoffice-fresh \
          mpv imv mupdf \
-         wireshark-gtk wifite
+         wireshark-gtk wifite \
+         mono freerdp remmina ansible chromium
 ```
 
 ### AUR
