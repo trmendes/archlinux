@@ -273,7 +273,6 @@ RuntimeMaxUse=10M
 ---------------------
 GRUB_TIMEOUT=0
 GRUB_GFXMODE=1024x768
-GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force"
 
 ```
 
