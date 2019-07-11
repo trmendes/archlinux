@@ -192,6 +192,14 @@ options uvcvideo timeout=5000
 options uvcvideo quirks=128
 ```
 
+### Libdir config
+
+```
+/etc/ld.so.conf.d/usrlocal.conf
+---------------------
+/usr/local/lib
+```
+
 ### Sound config
 
 ```
