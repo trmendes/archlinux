@@ -118,7 +118,8 @@
          libreoffice-fresh \
          mpv imv mupdf \
          wireshark-gtk wifite \
-         mono freerdp remmina ansible chromium
+         mono freerdp remmina ansible chromium \
+         sway swaybg swaylock swayidle grim slurp
 ```
 
 ### AUR
@@ -128,7 +129,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-yay -S brightnessctl
+yay -S light
 yay -S djmount
 ```
 
