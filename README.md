@@ -103,6 +103,7 @@
          pulseaudio-alsa alsa-utils \
          youtube-dl beets \
          subdl moc \
+         mpd mpc ncmpcpp \
          syncthing \
          repgrip fd \
          htop pass pass-otp exa bat expac tldr \
