@@ -334,6 +334,12 @@ GRUB_GFXMODE=1024x768
 # systemctl mask geoclue
 ```
 
+### Services as user
+
+```
+# systemctl --user enable mpd.service
+```
+
 ### Root Access
 
 * [INFO] If you want to disable the root access try this next command
