@@ -110,7 +110,7 @@
          ranger ffmpegthumbnailer highlight odt2txt poppler \
          wl-clipboard \
          kitty \
-         dunst rofi \
+         rofi \
          imagemagick \
          blueman \
          weechat python2-websocket-client python2-six \
@@ -120,7 +120,7 @@
          mpv imv mupdf \
          wireshark-gtk wifite \
          mono freerdp remmina ansible chromium \
-         sway swaybg swaylock swayidle grim slurp
+         sway swaybg swaylock swayidle grim slurp mako waybar
 ```
 
 ### AUR
