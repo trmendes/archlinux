@@ -107,7 +107,7 @@
          syncthing \
          repgrip fd \
          htop pass pass-otp exa bat expac tldr \
-         ranger ffmpegthumbnailer highlight odt2txt poppler \
+         ranger python-pillow ffmpegthumbnailer highlight odt2txt poppler \
          wl-clipboard \
          kitty \
          rofi \
