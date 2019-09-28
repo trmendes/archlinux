@@ -91,7 +91,7 @@
          rust \
          lua \
          jdk8-openjdk \
-         python python-requests python-pip flake8 mypy \
+         python python-requests python-pip flake8 \
          nodejs \
          hugo \
          android-udev \
