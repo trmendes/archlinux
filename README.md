@@ -121,8 +121,10 @@
          libreoffice-fresh \
          mpv imv mupdf \
          wireshark-gtk wifite \
-         mono freerdp remmina ansible chromium \
-         sway swaybg swaylock swayidle grim slurp mako waybar
+         freerdp remmina ansible chromium \
+         sway swaybg swaylock swayidle grim slurp mako waybar \
+         bandwhich
+
 ```
 
 ### AUR
