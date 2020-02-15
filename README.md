@@ -111,7 +111,7 @@
          ffmpegthumbnailer highlight odt2txt poppler \
          w3m mediainfo \
          wl-clipboard \
-         kitty \
+         alacritty \
          rofi \
          imagemagick \
          blueman \
