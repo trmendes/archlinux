@@ -79,7 +79,7 @@
          pkgfile \
          bind-tools \
          lm_sensors acpi acpid tlp tlp-rdw \
-         udevil \
+         udiskie \
          ntfs-3g \
          bluez \
          bash-completion \
@@ -112,8 +112,8 @@
          w3m mediainfo \
          wl-clipboard \
          alacritty \
-         rofi \
-         imagemagick \
+         wofi \
+        wimagemagick \
          blueman \
          weechat python2-websocket-client python2-six \
          transmission-gtk \
@@ -122,8 +122,7 @@
          mpv imv mupdf \
          wireshark-gtk wifite \
          freerdp remmina ansible chromium \
-         sway swaybg swaylock swayidle grim slurp mako waybar \
-         bandwhich
+         sway swaybg swaylock swayidle grim slurp mako waybar
 
 ```
 
@@ -135,7 +134,7 @@ cd yay
 makepkg -si
 
 yay -S light
-yay -S djmount
+yay -S wf-recorder
 ```
 
 ## Configure it
