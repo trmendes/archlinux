@@ -111,9 +111,9 @@
          ffmpegthumbnailer highlight odt2txt poppler \
          w3m mediainfo \
          wl-clipboard \
-         alacritty \
+         kitty \
          wofi \
-        wimagemagick \
+         wimagemagick \
          blueman \
          weechat python2-websocket-client python2-six \
          transmission-gtk \
