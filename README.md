@@ -122,7 +122,8 @@
          mpv imv mupdf \
          wireshark-gtk wifite \
          freerdp remmina ansible chromium \
-         sway swaybg swaylock swayidle grim slurp mako waybar
+         sway swaybg swaylock swayidle grim slurp mako waybar \
+         pipewire pipewire-pulse libpipewire02
 
 ```
 
