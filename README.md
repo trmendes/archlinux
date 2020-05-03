@@ -95,20 +95,18 @@
          nodejs \
          hugo \
          android-udev \
-         noto-fonts-emoji ttf-hack ttf-dejavu awesome-terminal-fonts \
+         ttf-hack ttf-dejavu awesome-terminal-fonts \
          ttf-font-awesome ttf-ionicons \
          neovim python-neovim \
-         aspell aspell-pt aspell-en aspell-it aspell-es \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          pulseaudio-alsa alsa-utils \
          youtube-dl beets \
          subdl moc \
-         mpd mpc ncmpcpp \
          syncthing \
          repgrip fd \
-         htop pass pass-otp exa bat expac tldr \
+         htop exa expac tldr \
          ranger python-pillow \
-         ffmpegthumbnailer highlight odt2txt poppler \
+         ffmpegthumbnailer highlight odt2txt \
          w3m mediainfo \
          wl-clipboard \
          kitty \
@@ -121,9 +119,9 @@
          libreoffice-fresh \
          mpv imv mupdf \
          wireshark-gtk wifite \
-         freerdp remmina ansible chromium \
+         remmina \
          sway swaybg swaylock swayidle grim slurp mako waybar \
-         pipewire pipewire-pulse libpipewire02
+         pipewire pipewire-pulse
 
 ```
 
