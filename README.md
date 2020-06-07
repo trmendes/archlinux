@@ -88,6 +88,7 @@
          git tig \
          gcc scdoc gdb \
          meson ninja cmake \
+         docker minikube \
          rust \
          lua \
          jdk8-openjdk \
@@ -100,29 +101,18 @@
          neovim python-neovim \
          pulseaudio pulseaudio-bluetooth pulseaudio-jack pulsemixer pacutils \
          pulseaudio-alsa alsa-utils \
+         pipewire pipewire-pulse \
          youtube-dl beets \
          subdl moc \
          syncthing \
-         repgrip fd \
          htop exa expac tldr \
-         ranger python-pillow \
-         ffmpegthumbnailer highlight odt2txt \
-         w3m mediainfo \
          wl-clipboard \
-         kitty \
+         alacritty \
          wofi \
-         wimagemagick \
          blueman \
-         weechat python2-websocket-client python2-six \
-         transmission-gtk \
-         firefox thunderbird \
-         libreoffice-fresh \
          mpv imv mupdf \
          wireshark-gtk wifite \
-         remmina \
-         sway swaybg swaylock swayidle grim slurp mako waybar \
-         pipewire pipewire-pulse
-
+         sway swaybg swaylock swayidle grim slurp mako waybar
 ```
 
 ### AUR
@@ -218,13 +208,28 @@ options snd_hda_intel index=1,0
 /etc/bluetooth/audio.conf
 ---------------------
 AutoEnable=false
-```
 
-```
+--
+
 /etc/bluetooth/audio.con
 ---------------------
 Enable=Source,Sink,Media,Socket
 
+```
+
+### Coredump systemctl
+
+```
+/etc/sysctl.d/50-coredump.conf
+---------------------
+kernel.core_pattern=|/bin/false
+
+--
+
+/etc/systemd/coredump.conf
+---------------------
+[Coredump]
+Storage=none
 ```
 
 ### Beep off
