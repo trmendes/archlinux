@@ -107,7 +107,8 @@
          syncthing \
          htop exa expac tldr \
          wl-clipboard \
-         alacritty \
+         kitty \
+         gammastep \
          wofi \
          blueman \
          mpv imv mupdf \
@@ -124,6 +125,7 @@ makepkg -si
 
 yay -S light
 yay -S wf-recorder
+yay -S gilbet
 ```
 
 ## Configure it
